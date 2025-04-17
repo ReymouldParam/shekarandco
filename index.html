@@ -142,7 +142,7 @@
                         </div>
                     </div>
 
-                    <div class="download-btn">
+                    <div class="download-btn" onclick="downloadBrochure()">
                         <button>Download Brochure</button>
                     </div>
                 </div>
@@ -171,8 +171,6 @@
                     <img src="./assets/images/Rectangle 274.png" alt="About image 3" class="img3" />
                     <img src="./assets/images/Rectangle 275.png" alt="About image 4" class="img4" />
                 </div>
-
-
                 <div class="about-content">
                     <h2>About Us</h2>
                     <h3>
@@ -414,6 +412,140 @@
                 </div>
             </div>
         </section>
+        <!-- cLIENTS' -->
+        <section class="clients-section">
+            <div class="clients-container">
+                <h2>Our Clinets</h2>
+                <div class="clinets-aling">
+                    <div class="happy-customers">
+                        <h2>Our Happy<br>Customers</h2>
+                        <p>
+                            I am drawn to the idea of providing valuable financial advice and services to clients
+                            and helping them achieve their goals. Additionally,
+                        </p>
+                    </div>
+                    <div class="client-logos">
+                        <div class="logos-grid">
+                            <img src="assets/images/tripmeld.svg" alt="TripMeld">
+                            <img src="assets/images/reymould-logo.svg" alt="ReyMould">
+                            <img src="assets/images/reyferjobs.svg" alt="ReyferJobs">
+                            <img src="assets/images/satya-enterprise-logo.svg" alt="Satva Enterprises">
+                            <img src="assets/images/terrasolve-logo.svg" alt="Terrasolve">
+                            <img src="assets/images/columbus-logo.svg" alt="Columbus Vacations">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="testimonial-section">
+            <h2 class="testimonial-title">Testimonials</h2>
+            <div class="testimonial-container">
+                <!-- Left Side -->
+                <div class="google-review">
+                    <img src="assets/images/google-review.svg" alt="Google Reviews">
+                    <p>Our <span class="highlight">Client’s</span> Are Saying….</p>
+                </div>
+                <!-- Right Side -->
+                <div class="testimonial-slider">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-cards">
+                            <div class="testimonial-card">
+                                <div class="test-text-para">
+                                    <div>
+                                        <h3>Rohit Mehta</h3>
+                                        <p class="company">Software Company</p>
+                                    </div>
+                                    <div>
+                                        <div class="stars">★★★★☆</div>
+                                    </div>
+                                </div>
+                                <p class="review">Managing GST and bookkeeping for my small business was overwhelming
+                                    until I partnered with [Your Firm’s Name]. Their guidance helped me stay compliant
+                                    while saving time and money!</p>
+                            </div>
+
+                            <div class="testimonial-card">
+                                <div class="test-text-para">
+                                    <div>
+                                        <h3>Rohit Mehta</h3>
+                                        <p class="company">Software Company</p>
+                                    </div>
+                                    <div>
+                                        <div class="stars">★★★★☆</div>
+                                    </div>
+                                </div>
+                                <p class="review">Managing GST and bookkeeping for my small business was overwhelming
+                                    until I partnered with [Your Firm’s Name]. Their guidance helped me stay compliant
+                                    while saving time and money!</p>
+                            </div>
+
+                            <div class="testimonial-card">
+                                <div class="test-text-para">
+                                    <div>
+                                        <h3>Rohit Mehta</h3>
+                                        <p class="company">Software Company</p>
+                                    </div>
+                                    <div>
+                                        <div class="stars">★★★★☆</div>
+                                    </div>
+                                </div>
+                                <p class="review">Managing GST and bookkeeping for my small business was overwhelming
+                                    until I partnered with [Your Firm’s Name]. Their guidance helped me stay compliant
+                                    while saving time and money!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer part -->
+        <section class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-map">
+                        <!-- <div class="footer-address-box">
+                    <p>
+                      📍 Plot No.81, Green Park Avenue,<br />
+                      Suchitra Circle, Jeedimetla Village,<br />
+                      Near Surabhi Pride Hotel,<br />
+                      Hyderabad - 500067
+                    </p>
+                  </div> -->
+                        <iframe
+                            src="https://maps.google.com/maps?q=Metro%20Cash%20and%20Carry%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="footer-form">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="footer-bottom">
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:sanda@shekarandco.com">sanda@shekarandco.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7093288864</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>Copyright © 2025. All rights reserved.</p>
+            </div>
+        </section>
+
 
 
     </div>
@@ -421,177 +553,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- Add this ScrollTrigger plugin after gsap core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            console.log("Running GSAP...");
-
-            const tl = gsap.timeline({
-                defaults: {
-                    ease: "slow(0.7, 0.7, false)", // ultra smooth ease
-                    duration: 1.5                  // baseline slower animation
-                }
-            });
-
-            tl.from(".left-section", {
-                clipPath: "inset(0% 100% 0% 0%)", // reveals from left to right
-                opacity: 0,
-                duration: 2.5,                    // ⏳ slower duration
-                ease: "slow(0.7, 0.7, false)"     // 🧈 ultra-smooth easing
-            })
-                .from(".middle-section", {
-                    opacity: 0,
-                    scale: 0.85,
-                    duration: 1.8
-                }, "-=1")
-                .from(".right-section .business-card", {
-                    y: 80,
-                    opacity: 0,
-                    scale: 0.92,
-                    duration: 1.6
-                }, "-=1")
-                .from(".download-btn", {
-                    y: 60,
-                    opacity: 0,
-                    scale: 0.9,
-                    duration: 1.5
-                }, "-=1")
-                .from(".stats-section", {
-                    y: 80,
-                    opacity: 0,
-                    scale: 0.85,   // ✅ Add scale-up effect
-                    duration: 1.5
-                }, "-=1")
-                .from(".stat-item", {
-                    y: 50,
-                    opacity: 0,
-                    scale: 0.90,
-                    stagger: {
-                        each: 0.9,
-                        from: "center"
-                    },
-                    duration: 2
-                }, "-=1.2");
-        });
-    </script>
-    <!-- CHOOSE US  -->
-    <script>
-        const cards = document.querySelectorAll(".card");
-        let currentIndex = 0;
-
-        function arrangeStack() {
-            cards.forEach((card, i) => {
-                const indexFromTop = (i - currentIndex + cards.length) % cards.length;
-
-                if (indexFromTop === 0) {
-                    // Top visible card
-                    gsap.set(card, {
-                        x: 0,
-                        scale: 1,
-                        opacity: 1,
-                        zIndex: cards.length,
-                        pointerEvents: "auto"
-                    });
-                } else if (indexFromTop < 5) {
-                    // Stacked cards behind
-                    gsap.set(card, {
-                        x: -indexFromTop * 22,
-                        scale: 1 - indexFromTop * 0.02,
-                        opacity: 0.7 - indexFromTop * 0.1,
-                        zIndex: cards.length - indexFromTop,
-                        rotateX: -7 * indexFromTop, // <--- upward tilt
-                        transformOrigin: "center bottom", // pivot from bottom
-                        pointerEvents: "none"
-                    });
-                } else {
-                    // Hide rest
-                    gsap.set(card, {
-                        opacity: 0,
-                        zIndex: 0,
-                        pointerEvents: "none"
-                    });
-                }
-            });
-        }
-
-        function animateTopCardOut() {
-            const currentCard = cards[currentIndex];
-            gsap.to(currentCard, {
-                x: 800,
-                y: 100, // Move up slightly for angled effect
-                rotation: 10, // Tilt the card a bit
-                opacity: 0,
-                duration: 2.8,
-                ease: "power3.inOut",
-                onComplete: () => {
-                    // Reset card to original position off-screen and invisible
-                    gsap.set(currentCard, { x: 0, y: 0, rotation: 0, opacity: 0 });
-                    currentIndex = (currentIndex + 1) % cards.length;
-                    arrangeStack(); // Rearrange stack with updated index
-                }
-            });
-        }
-
-
-        window.addEventListener("DOMContentLoaded", () => {
-            arrangeStack();
-
-            setInterval(() => {
-                // Delay the exit animation to give time for reading
-                setTimeout(() => {
-                    animateTopCardOut();
-                }, 4500); // 2.5 seconds delay before exit animation starts
-            }, 6000); // total cycle: 2.5s read time + 3.5s animation
-        });
-    </script>
-
-
-    <!-- Carousel CDN -->
     <!-- jQuery (modern version) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- carousel -->
-    <script>
-        $(document).ready(function () {
-            $('.responsive').slick({
-                dots: true,
-                infinite: true,
-                speed: 900,
-                arrows: true,
-                autoplay: true,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                prevArrow: '<button type="button" class="slick-prev custom-arrow"><i class="arrow left"></i></button>',
-                nextArrow: '<button type="button" class="slick-next custom-arrow"><i class="arrow right"></i></button>',
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
-
+    <!-- JS FILE -->
+    <script src="assets/functionality.js"></script>
 </body>
 
 </html>
