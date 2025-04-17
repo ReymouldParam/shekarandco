@@ -1,3 +1,12 @@
+// header
+const menuToggle = document.getElementById('menu-toggle');
+const navWrapper = document.getElementById('nav-wrapper');
+
+menuToggle.addEventListener('click', () => {
+    navWrapper.classList.toggle('show');
+});
+
+
 // SECTION1
 // GSAP Animation
 window.addEventListener('load', () => {

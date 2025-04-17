@@ -293,6 +293,130 @@
 
 }
 
+/* mobile responsive */
+@media screen and (max-width: 768px) {
+
+    .business-container {
+        padding: 5%;
+        background-position: center;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-section,
+    .right-section,
+    .carousel {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .text-box h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .middle-section {
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .middle-section .stat-img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .carousel {
+        height: 450px;
+    }
+
+    .carousel-inner {
+        animation: slideCardsMobile 12s linear infinite;
+    }
+
+    @keyframes slideCardsMobile {
+
+        0%,
+        30% {
+            transform: translateY(0);
+        }
+
+        35%,
+        65% {
+            transform: translateY(-450px);
+        }
+
+        70%,
+        100% {
+            transform: translateY(-900px);
+        }
+    }
+
+    .business-card {
+        height: 450px;
+        padding: 15px;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 15px;
+    }
+
+    .know {
+        font-size: 20px;
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle-button .arrow {
+        font-size: 24px;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        width: 100%;
+        font-size: 20px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .download-btn button {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
 
 
 /* Media Query for Mac Retina devices */
@@ -877,6 +1001,91 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     color: #fff;
 }
 
+/* mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 50px 20px;
+        background-position: center;
+    }
+
+    .about-section .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .about-images {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .about-images img {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Re-scale images proportionally */
+    .img1,
+    .img4 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .img2,
+    .img3 {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Adjust image positions for new layout */
+    .img1 {
+        top: 0;
+        left: 0;
+    }
+
+    .img2 {
+        top: 50px;
+        left: 130px;
+    }
+
+    .img3 {
+        top: 140px;
+        left: 50px;
+    }
+
+    .img4 {
+        top: 140px;
+        left: 140px;
+    }
+
+    .about-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content h3 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .explore-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 250px;
+        margin: auto;
+    }
+}
+
+
 /* responsiveness */
 @media only screen and (min-width: 1280px) and (max-width: 2560px) and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1447,6 +1656,129 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     margin-right: -20px;
 }
 
+/* mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .our-service-con h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .service-para {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .service-box {
+        flex-direction: column;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .spiral-strip {
+        width: 100%;
+        height: 20px;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .spiral-strip img {
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .service-content {
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        text-align: left;
+    }
+
+    .service-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-icon {
+        width: 80px;
+    }
+
+    .service-header h3 {
+        font-size: 18px;
+    }
+
+    .service-content ul li {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .know-more {
+        align-self: center;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Carousel arrows positioning fix */
+    .custom-arrow {
+        width: 45px;
+        height: 45px;
+    }
+
+    .slick-prev {
+        left: 30%;
+    }
+
+    .slick-next {
+        left: 70%;
+    }
+
+    /* Why Choose Us Section */
+    .section-heading {
+        font-size: 24px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cards-stack {
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        position: relative;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        opacity: 1;
+        pointer-events: all;
+        transform: none;
+        border-left: 6px solid #2D9AD1;
+    }
+
+    .icon-box img {
+        width: 80px;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content h3 {
+        font-size: 20px;
+    }
+
+    .text-content p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .btn-known-more {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+
 
 .why-choose-us {
     background-image: url('./images/choose-bg.png');
@@ -1478,6 +1810,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     width: 100%;
     max-width: 750px;
     background: #fff;
+    height: 500px;
     padding: 40px;
     border: 2px solid #2D9AD1;
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.25);
@@ -1528,6 +1861,82 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 .btn-known-more:hover {
     background-color: #007bff;
     color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .cards-stack {
+        height: auto;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .card {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        z-index: auto;
+        margin-bottom: 30px;
+        padding: 30px 20px;
+    }
+
+    .icon-box img {
+        width: 90px;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    .text-content {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .text-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .text-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .btn-known-more {
+        display: inline-block;
+        font-size: 0.95rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-heading {
+        font-size: 24px;
+        padding: 10px 15px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .text-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-known-more {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+
+    .icon-box img {
+        width: 70px;
+    }
 }
 
 
@@ -1619,6 +2028,60 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     max-height: 80px;
     max-width: 100%;
     object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .clients-container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .clients-container h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .clinets-aling {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .happy-customers {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .happy-customers h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .happy-customers p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .client-logos {
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .client-logos h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .logos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .logos-grid img {
+        max-height: 60px;
+    }
 }
 
 
@@ -2040,6 +2503,74 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     line-height: 1.5;
     border-top: 1px solid #ddd;
     /* padding-top: 10px; */
+}
+
+/* mobile responsive */
+@media screen and (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .google-review {
+        min-width: 100%;
+    }
+
+    .google-review img {
+        width: 180px;
+    }
+
+    .google-review h3 {
+        font-size: 20px;
+    }
+
+    .google-review p {
+        font-size: 14px;
+    }
+
+    .testimonial-slider {
+        min-width: 100%;
+    }
+
+    .testimonial-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .testimonial-wrapper {
+        height: auto;
+        overflow: visible;
+    }
+
+    .testimonial-cards {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .testimonial-card h3 {
+        font-size: 16px;
+    }
+
+    .testimonial-card .company {
+        font-size: 14px;
+    }
+
+    .testimonial-card .stars {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .testimonial-card .review {
+        font-size: 14px;
+        padding-top: 10px;
+    }
 }
 
 
