@@ -7,7 +7,7 @@
     background-color: #fff;
     border-radius: 20px;
     padding: 2%;
-    width: 90%;
+    width: 95%;
     margin: auto;
     background-image: url('./images/background-img.png');
     background-size: cover;
@@ -59,14 +59,14 @@
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: var(--heading2);
     font-weight: 600;
     color: #333;
     margin-bottom: 15px;
 }
 
 .desc {
-    font-size: 15px;
+    font-size: var(--para-heading);
     color: #555;
     line-height: 1.6;
 }
@@ -187,18 +187,18 @@
 
 /* ---------- Card Content Styling ---------- */
 .card-content h3 {
-    font-size: 22px;
+    font-size: var(--heading2);
     /* Slightly larger font size for improved readability */
     font-weight: 700;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     color: #222;
 }
 
 .card-content p {
-    font-size: 16px;
+    font-size: var(--para-heading);
     /* Increased font size for content */
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .card-content a {
@@ -215,7 +215,7 @@
 
 .know {
     color: #004aad;
-    font-size: 25px;
+    font-size: var(--para-heading);
     font-weight: 500;
     background: none;
     border: none;
@@ -235,16 +235,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 30px;
     /* Width and height to make the button circular */
-    height: 50px;
+    height: 30px;
     cursor: pointer;
     transform: rotate(-45deg);
 }
 
 /* Style for the arrow icon */
 .circle-button .arrow {
-    font-size: 30px;
+    font-size: 20px;
     /* Adjust size of the arrow */
     color: #004aad;
     /* Set the arrow color to match the border */
@@ -257,7 +257,7 @@
     color: #fff;
     display: flex;
     border-radius: 15px;
-    font-size: 26px;
+    font-size: var(--heading2);
     padding: 20px;
     text-align: center;
     width: fit-content;
@@ -270,7 +270,7 @@
 }
 
 .stat-number {
-    font-size: 32px;
+    font-size: var(--heading2);
     font-weight: bold;
 }
 
@@ -287,38 +287,45 @@
     color: white;
     padding: 20px 30px;
     border-radius: 12px;
-    font-size: 22px;
+    font-size: var(--heading2);
     cursor: pointer;
     width: 600px;
 
 }
 
 /* mobile responsive */
-@media screen and (max-width: 768px) {
-
+@media (max-width: 768px) {
     .business-container {
-        padding: 5%;
-        background-position: center;
+        width: 100%;
+        padding: 20px 10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        background-size: contain;
     }
 
     .content-wrapper {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 
     .left-section,
-    .right-section,
-    .carousel {
+    .middle-section,
+    .right-section {
         width: 100%;
-        min-width: unset;
-        height: auto;
-        padding: 20px;
+        min-width: auto;
         margin: 0 auto;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-section {
+        padding: 20px 15px;
     }
 
     .text-box h1 {
         font-size: 30px;
-        line-height: 1.3;
     }
 
     .subtitle {
@@ -331,25 +338,70 @@
 
     .middle-section {
         margin-top: 0;
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: 30px; */
+        margin-left: 50px;
+        margin-bottom: -50px;
+        align-items: center;
     }
 
     .middle-section .stat-img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         margin: 0 auto;
     }
 
+    .right-section {
+        margin-top: 0;
+    }
+
     .carousel {
-        height: 450px;
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+        border-radius: 16px;
     }
 
     .carousel-inner {
         animation: slideCardsMobile 12s linear infinite;
     }
 
+    .business-card {
+        height: 400px;
+        padding: 15px;
+    }
+
+    .image-container {
+        height: 180px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .know {
+        font-size: 18px;
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .circle-button .arrow {
+        font-size: 22px;
+    }
+
+    /* Updated keyframes for smaller card height on mobile */
     @keyframes slideCardsMobile {
 
         0%,
@@ -359,64 +411,35 @@
 
         35%,
         65% {
-            transform: translateY(-450px);
+            transform: translateY(-400px);
         }
 
         70%,
         100% {
-            transform: translateY(-900px);
+            transform: translateY(-800px);
         }
-    }
-
-    .business-card {
-        height: 450px;
-        padding: 15px;
-    }
-
-    .image-container {
-        height: 200px;
-    }
-
-    .card-content h3 {
-        font-size: 20px;
-    }
-
-    .card-content p {
-        font-size: 15px;
-    }
-
-    .know {
-        font-size: 20px;
-    }
-
-    .circle-button {
-        width: 40px;
-        height: 40px;
-    }
-
-    .circle-button .arrow {
-        font-size: 24px;
     }
 
     .stats-section {
         flex-direction: column;
-        width: 100%;
-        font-size: 20px;
+        font-size: 18px;
         padding: 15px;
+        width: 100%;
         margin-top: 20px;
+        gap: 10px;
     }
 
     .stat-number {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .download-btn button {
-        width: 100%;
+        padding: 15px 20px;
         font-size: 18px;
-        padding: 15px;
+        width: 100%;
+        max-width: 95%;
     }
 }
-
 
 
 /* Media Query for Mac Retina devices */
@@ -425,7 +448,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
     /* Adjustments for Business Container */
     .business-container {
-        width: 85%;
+        width: 96%;
         /* Decrease width slightly for larger screens */
         margin-top: 2%;
         margin-bottom: 2%;
@@ -521,73 +544,134 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 /* responsove for HD */
 @media screen and (min-width: 1360px) and (max-width: 1370px) and (min-height: 760px) and (max-height: 770px) {
+
+    /* Adjustments for Business Container */
     .business-container {
-        padding: 2.5%;
-        background-size: cover;
+        width: 90%;
+        /* Decrease width slightly for larger screens */
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 1.5%;
     }
 
-    .content-wrapper {
-        flex-direction: row;
-        gap: 30px;
-        justify-content: space-between;
+    /* Adjust Left Section */
+    .left-section {
+        min-width: 450px;
+        /* Increase min-width for wider screens */
+        height: 500px;
+        /* Increase height slightly */
+        padding: 35px 30px;
+        /* Increase padding */
     }
 
-    .left-section,
-    .middle-section,
-    .right-section {
-        width: 32%;
-        height: auto;
-    }
-
+    /* Adjust Text Box */
     .text-box h1 {
-        font-size: 52px;
-        line-height: 1.2;
+        font-size: 60px;
+        /* Increase font size for larger screens */
     }
 
     .subtitle {
         font-size: 20px;
+        /* Increase font size */
     }
 
-    .desc {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
+    /* Adjust Middle Section */
     .middle-section .stat-img {
-        width: 100%;
-        height: auto;
+        max-width: 800px;
+        /* Increase image size */
+        height: 650px;
+        /* Adjust image height */
+        margin-left: -80px;
     }
 
+    /* Adjust Right Section */
+    .right-section {
+        min-width: 300px;
+        /* Increase min-width */
+        margin-top: 0px;
+    }
+
+    /* Carousel Adjustments */
     .carousel {
         width: 100%;
-        height: 500px;
+        /* Slightly larger width */
+        height: 620px;
+        /* Increase height */
     }
 
+    /* ---------- Carousel Inner: Slides vertically ---------- */
+    .carousel-inner {
+        height: 100%;
+        /* With three cards at 600px each, the total height is 1800px. */
+        animation: slideCards 12s linear infinite;
+    }
+
+    /* ---------- Keyframes for sliding the carousel ---------- */
+    @keyframes slideCards {
+
+        /* Display Card 1 */
+        0%,
+        30% {
+            transform: translateY(0);
+        }
+
+        /* Slide to Card 2 */
+        35%,
+        65% {
+            transform: translateY(-650px);
+        }
+
+        /* Slide to Card 3 */
+        70%,
+        100% {
+            transform: translateY(-1300px);
+        }
+    }
+
+    /* Business Card Styling */
     .business-card {
-        height: 500px;
+        height: 650px;
+        /* Increased height to accommodate larger screens */
+    }
+
+    .image-container {
+        height: 300px;
+        /* Increase image container height */
+    }
+
+    .card-content h3 {
+        font-size: 24px;
+        /* Increase font size */
+    }
+
+    .card-content p {
+        font-size: 18px;
+        /* Increase font size */
     }
 
     .download-btn button {
-        font-size: 20px;
-        padding: 18px 28px;
-        width: 100%;
+        width: 650px;
+        /* Increase button width */
+        padding: 25px 40px;
+        /* Adjust padding */
     }
 
+    /* Stats Section Adjustments */
     .stats-section {
-        font-size: 24px;
+        font-size: 28px;
+        /* Increase font size */
         padding: 25px;
-        margin-top: -120px;
-        justify-content: center;
-        gap: 20px;
+        /* Adjust padding */
     }
 
     .stat-number {
-        font-size: 32px;
+        font-size: 36px;
+        /* Increase font size */
     }
 }
 
 /* ✅ Full HD / High-Res Laptops & Desktops (Effective width 1536px and above) */
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: 1920px) {
     .business-container {
         background-color: #fff;
         border-radius: 20px;
@@ -882,6 +966,107 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 }
 
+@media screen and (min-width:2560px) and (min-height:1600px) {
+
+    /* Adjustments for Business Container */
+    .business-container {
+        width: 96%;
+        /* Decrease width slightly for larger screens */
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 1.5%;
+    }
+
+    /* Adjust Left Section */
+    .left-section {
+        min-width: 450px;
+        /* Increase min-width for wider screens */
+        height: 500px;
+        /* Increase height slightly */
+        padding: 35px 30px;
+        /* Increase padding */
+    }
+
+    /* Adjust Text Box */
+    .text-box h1 {
+        font-size: 60px;
+        /* Increase font size for larger screens */
+    }
+
+    .subtitle {
+        font-size: 20px;
+        /* Increase font size */
+    }
+
+    /* Adjust Middle Section */
+    .middle-section .stat-img {
+        max-width: 800px;
+        /* Increase image size */
+        height: 650px;
+        /* Adjust image height */
+        margin-left: -80px;
+    }
+
+    /* Adjust Right Section */
+    .right-section {
+        min-width: 350px;
+        /* Increase min-width */
+        margin-top: -80px;
+    }
+
+    /* Carousel Adjustments */
+    .carousel {
+        width: 450px;
+        /* Slightly larger width */
+        height: 600px;
+        /* Increase height */
+    }
+
+    /* Business Card Styling */
+    .business-card {
+        height: 650px;
+        /* Increased height to accommodate larger screens */
+    }
+
+    .image-container {
+        height: 300px;
+        /* Increase image container height */
+    }
+
+    .card-content h3 {
+        font-size: 24px;
+        /* Increase font size */
+    }
+
+    .card-content p {
+        font-size: 18px;
+        /* Increase font size */
+    }
+
+    .download-btn button {
+        width: 650px;
+        /* Increase button width */
+        padding: 25px 40px;
+        /* Adjust padding */
+    }
+
+    /* Stats Section Adjustments */
+    .stats-section {
+        font-size: 28px;
+        /* Increase font size */
+        padding: 25px;
+        /* Adjust padding */
+    }
+
+    .stat-number {
+        font-size: 36px;
+        /* Increase font size */
+    }
+
+}
+
+
+
 
 /* about us  */
 .about-section {
@@ -958,18 +1143,18 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 }
 
 .about-content h2 {
-    font-size: 2.8rem;
+    font-size: var(--heading1);
     color: #154b91;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 .about-content h3 {
-    font-size: 48px;
+    font-size: var(--heading1);
     font-weight: 600;
     color: #222;
     line-height: 1.4;
-    margin-bottom: 18px;
+    margin-bottom: 5px;
 }
 
 .about-content h3 span {
@@ -978,7 +1163,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 }
 
 .about-content p {
-    font-size: 1rem;
+    font-size: var(--para-heading);
     color: #444;
     line-height: 1.8;
     margin-bottom: 28px;
@@ -991,7 +1176,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     background-color: transparent;
     color: #154b91;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: var(--para-heading);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1016,8 +1201,8 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     .about-images {
         width: 100%;
         max-width: 350px;
-        height: 350px;
-        margin-bottom: 30px;
+        height: 300px;
+        /* margin-bottom: 30px; */
         position: relative;
     }
 
@@ -1469,14 +1654,14 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 }
 
 .our-service-con h2 {
-    font-size: 48px;
+    font-size: var(--heading1);
     color: #C7E7F6;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .service-para {
     color: white;
-    font-size: 20px;
+    font-size: var(--para-heading);
     font-family: "Poppins";
 }
 
@@ -1540,7 +1725,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .service-header h3 {
     color: #004aad;
-    font-size: 20px;
+    font-size: var(--heading2);
     padding-bottom: 10px;
 }
 
@@ -1561,18 +1746,17 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     margin-left: 15px;
 }
 
-
 /* Button */
 .know-more {
     background-color: white;
     color: #004aad;
     border: 2px solid #004aad;
-    padding: 8px 20px;
+    padding: 5px 20px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 14px;
+    font-size: var(--para-heading);
     align-self: flex-start;
 }
 
@@ -1656,130 +1840,29 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     margin-right: -20px;
 }
 
-/* mobile responsiveness */
 @media screen and (max-width: 768px) {
     .our-service-con h2 {
-        font-size: 30px;
-        text-align: center;
+        font-size: 20px;
+        color: #C7E7F6;
+        margin-top: 10px;
     }
 
     .service-para {
+        color: white;
         font-size: 16px;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .service-box {
-        flex-direction: column;
-        height: auto;
-        border-radius: 20px;
-    }
-
-    .spiral-strip {
-        width: 100%;
-        height: 20px;
-        justify-content: flex-start;
-        padding-left: 10px;
-    }
-
-    .spiral-strip img {
-        height: 100%;
-        margin-left: 0;
-    }
-
-    .service-content {
-        padding: 20px;
-        border-radius: 0 0 20px 20px;
-        text-align: left;
-    }
-
-    .service-header {
-        align-items: center;
+        font-family: "Poppins";
         text-align: center;
     }
 
-    .service-icon {
-        width: 80px;
-    }
-
-    .service-header h3 {
-        font-size: 18px;
-    }
-
-    .service-content ul li {
-        font-size: 14px;
-        margin-left: 20px;
-    }
-
-    .know-more {
-        align-self: center;
-        padding: 10px 16px;
-        font-size: 14px;
-    }
-
-    /* Carousel arrows positioning fix */
     .custom-arrow {
-        width: 45px;
-        height: 45px;
+        top: 88%;
+        width: 20px;
+        height: 20px;
     }
 
-    .slick-prev {
-        left: 30%;
-    }
-
-    .slick-next {
-        left: 70%;
-    }
-
-    /* Why Choose Us Section */
-    .section-heading {
-        font-size: 24px;
-        padding-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .cards-stack {
-        height: auto;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        position: relative;
-        max-width: 100%;
-        padding: 20px;
-        border-radius: 20px;
-        opacity: 1;
-        pointer-events: all;
-        transform: none;
-        border-left: 6px solid #2D9AD1;
-    }
-
-    .icon-box img {
-        width: 80px;
-    }
-
-    .text-content {
-        text-align: center;
-    }
-
-    .text-content h3 {
-        font-size: 20px;
-    }
-
-    .text-content p {
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-
-    .btn-known-more {
-        font-size: 14px;
-        padding: 8px 20px;
-    }
 }
 
-
-
+/* WHY CHOOSE US */
 .why-choose-us {
     background-image: url('./images/choose-bg.png');
     background-size: cover;
@@ -1788,7 +1871,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 }
 
 .section-heading {
-    font-size: 30px;
+    font-size: var(--heading1);
     font-weight: 800;
     color: #000;
     text-align: center;
@@ -1810,7 +1893,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     width: 100%;
     max-width: 750px;
     background: #fff;
-    height: 500px;
+    height: 100%;
     padding: 40px;
     border: 2px solid #2D9AD1;
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.25);
@@ -1836,12 +1919,12 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .text-content h3 {
     color: #002e6e;
-    font-size: 1.6rem;
+    font-size: var(--heading2);
     font-weight: 700;
 }
 
 .text-content p {
-    font-size: 1rem;
+    font-size: var(--para-heading);
     color: #333;
     line-height: 1.6;
     /* margin: 10px 0 20px; */
@@ -1856,6 +1939,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     color: #007bff;
     font-weight: 500;
     transition: all 0.3s ease;
+    font-size: var(--para-heading);
 }
 
 .btn-known-more:hover {
@@ -1863,35 +1947,38 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     color: #fff;
 }
 
-@media (max-width: 1024px) {
+
+/* Retain animation effect for cards */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-heading {
+        font-size: 20px;
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .cards-stack {
-        height: auto;
-        flex-direction: column;
-        padding: 20px 10px;
+        height: 300px;
+        padding: 10px;
     }
 
     .card {
-        position: static;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        opacity: 1;
-        transform: none;
-        pointer-events: auto;
-        z-index: auto;
-        margin-bottom: 30px;
-        padding: 30px 20px;
-    }
-
-    .icon-box img {
-        width: 90px;
-        display: block;
-        margin: 0 auto 20px auto;
-    }
-
-    .text-content {
-        text-align: center;
-        margin-top: 10px;
+        max-width: 90%;
+        padding: 20px;
     }
 
     .text-content h3 {
@@ -1899,43 +1986,12 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     }
 
     .text-content p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    .btn-known-more {
-        display: inline-block;
-        font-size: 0.95rem;
-        padding: 8px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .section-heading {
-        font-size: 24px;
-        padding: 10px 15px;
-    }
-
-    .card {
-        padding: 20px 15px;
-    }
-
-    .text-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .text-content p {
         font-size: 0.9rem;
     }
 
     .btn-known-more {
+        padding: 8px 16px;
         font-size: 0.9rem;
-        padding: 8px 18px;
-    }
-
-    .icon-box img {
-        width: 70px;
     }
 }
 
@@ -1976,7 +2032,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .clients-container h2 {
     color: #0c5d9d;
-    font-size: 32px;
+    font-size: var(--heading1);
     margin-top: 0px;
     margin-bottom: 20px;
     line-height: 1.3;
@@ -1992,14 +2048,14 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .happy-customers h2 {
     color: #0c5d9d;
-    font-size: 32px;
+    font-size: var(--heading1);
     margin-bottom: 20px;
     line-height: 1.3;
     text-align: left;
 }
 
 .happy-customers p {
-    font-size: 15px;
+    font-size: var(--para-heading);
     color: #222;
     line-height: 1.6;
 }
@@ -2030,57 +2086,100 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     object-fit: contain;
 }
 
+/* Mobile responsive for Clients section */
 @media screen and (max-width: 768px) {
+
+    /* Clients Section */
+    .clients-section {
+        padding: 20px 10px;
+        /* Adjust padding for mobile */
+    }
+
     .clients-container {
-        padding: 20px;
+        margin: 0 auto;
+        max-width: 100%;
+        /* Full width for mobile */
         border-radius: 20px;
+        /* Slightly reduce border radius for mobile */
+        padding: 15px;
+        display: block;
+        /* Stack elements vertically on mobile */
+    }
+
+    .clinets-aling {
+        margin: 0 auto;
+        max-width: 100%;
+        /* Full width for mobile */
+        padding: 10px;
+        display: block;
+        /* Stack items vertically on mobile */
+        gap: 20px;
+        /* Adjust the gap between elements */
     }
 
     .clients-container h2 {
         font-size: 24px;
+        /* Adjust heading font size */
         text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .clinets-aling {
-        flex-direction: column;
-        gap: 40px;
-        padding: 20px;
+        margin-bottom: 15px;
+        /* Adjust margin */
     }
 
     .happy-customers {
-        text-align: center;
+        flex: 1;
+        min-width: 100%;
+        /* Allow the happy-customers section to take full width */
         max-width: 100%;
+        /* Remove max-width restriction */
+        padding: 10px;
+        /* Adjust padding */
     }
 
     .happy-customers h2 {
         font-size: 24px;
+        /* Adjust font size */
         text-align: center;
+        /* Center-align text */
     }
 
     .happy-customers p {
         font-size: 14px;
-        padding: 0 10px;
+        /* Adjust font size */
+        color: #222;
+        line-height: 1.6;
     }
 
     .client-logos {
+        flex: 1;
+        min-width: 100%;
+        /* Allow client logos section to take full width */
         padding-left: 0;
-        width: 100%;
-        text-align: center;
+        /* Remove left padding */
+        padding-top: 20px;
     }
 
     .client-logos h2 {
         font-size: 24px;
+        /* Adjust font size */
+        text-align: center;
+        /* Center-align text */
         margin-bottom: 20px;
+        /* Adjust margin */
     }
 
     .logos-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for mobile */
         gap: 20px;
+        /* Adjust gap between logos */
     }
 
     .logos-grid img {
         max-height: 60px;
+        /* Resize logos for mobile */
+        max-width: 100%;
+        object-fit: contain;
     }
 }
 
@@ -2403,7 +2502,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .google-review h3 {
     font-weight: bold;
-    font-size: 22px;
+    font-size: var(--para-heading);
     margin-bottom: 5px;
 }
 
@@ -2413,7 +2512,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .google-review p {
     color: #333;
-    font-size: 16px;
+    font-size: var(--heading2);
     margin: 0;
 }
 
@@ -2430,7 +2529,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .testimonial-title {
     color: #2b3e50;
-    font-size: 32px;
+    font-size: var(--heading1);
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
@@ -2458,10 +2557,12 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 /* Card Styling */
 .testimonial-card {
-    background: white;
-    padding: 24px 30px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    /* Glass effect with transparency */
+    backdrop-filter: blur(10px);
+    padding: 20px 20px;
     border-radius: 18px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); */
     box-sizing: border-box;
     width: 100%;
     max-width: 700px;
@@ -2475,7 +2576,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 /* Name & Company */
 .testimonial-card h3 {
     color: #0c5d9d;
-    font-size: 18px;
+    font-size: var(--para-heading);
     font-weight: 700;
     margin: 0;
 }
@@ -2489,7 +2590,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 /* Stars aligned right */
 .testimonial-card .stars {
     color: #fbbc05;
-    font-size: 40px;
+    font-size: var(--heading1);
     text-align: right;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4),
         0 0 8px rgba(251, 188, 5, 0.8);
@@ -2501,78 +2602,108 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     font-size: 15px;
     color: #444;
     line-height: 1.5;
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #ddd;
     /* padding-top: 10px; */
 }
 
-/* mobile responsive */
+/* mobile responsiveness */
+/* Mobile responsive for Testimonial section */
 @media screen and (max-width: 768px) {
-    .testimonial-container {
-        flex-direction: column;
-        gap: 30px;
-        padding: 0 10px;
+
+    /* Section Styling */
+    .testimonial-section {
+        padding: 40px 20px;
+        /* Adjust padding for mobile */
+        background-size: cover;
+        background-position: center;
     }
 
+    /* Container Flex Layout */
+    .testimonial-container {
+        max-width: 100%;
+        /* Full width for mobile */
+        margin: 0 auto;
+        display: block;
+        /* Stack elements vertically on mobile */
+        gap: 20px;
+        /* Space between the elements */
+    }
+
+    /* Left: Google Review */
     .google-review {
+        flex: 1;
         min-width: 100%;
+        /* Full width for mobile */
+        text-align: center;
+        margin-bottom: 20px;
+        /* Add space below the Google review */
     }
 
     .google-review img {
-        width: 180px;
+        width: 150px;
+        /* Adjust image size for mobile */
+        margin-bottom: 10px;
     }
 
     .google-review h3 {
+        font-size: 18px;
+        /* Adjust font size for mobile */
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .google-review .stars {
         font-size: 20px;
+        /* Adjust star size for mobile */
     }
 
     .google-review p {
+        color: #333;
         font-size: 14px;
+        /* Adjust font size for mobile */
+        margin: 0;
     }
 
-    .testimonial-slider {
-        min-width: 100%;
+    .google-review .highlight {
+        color: #0c5d9d;
+        font-weight: bold;
     }
 
-    .testimonial-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-        margin-top: 0;
-    }
-
-    .testimonial-wrapper {
-        height: auto;
-        overflow: visible;
-    }
-
-    .testimonial-cards {
-        gap: 20px;
-    }
-
-    .testimonial-card {
-        padding: 20px;
-        max-width: 100%;
-        min-height: auto;
-    }
-
+    /* Name & Company */
     .testimonial-card h3 {
+        color: #0c5d9d;
         font-size: 16px;
+        /* Adjust font size */
+        font-weight: 700;
+        margin: 0;
     }
 
     .testimonial-card .company {
+        color: #3d6c99;
         font-size: 14px;
+        /* Adjust font size */
+        margin: 4px 0 10px;
     }
 
+    /* Stars aligned right */
     .testimonial-card .stars {
-        font-size: 28px;
-        text-align: center;
+        color: #fbbc05;
+        font-size: 30px;
+        /* Adjust star size */
+        text-align: left;
+        /* Align stars to the left for mobile */
     }
 
+    /* Review text */
     .testimonial-card .review {
         font-size: 14px;
+        /* Adjust font size */
+        color: #444;
+        line-height: 1.5;
+        border-top: 1px solid #ddd;
         padding-top: 10px;
     }
 }
-
 
 /* responsiveness */
 @media only screen and (min-width: 1280px) and (max-width: 2560px) and (-webkit-min-device-pixel-ratio: 2),

@@ -1,10 +1,11 @@
 // header
-const menuToggle = document.getElementById('menu-toggle');
-const navWrapper = document.getElementById('nav-wrapper');
+  const menuToggle = document.getElementById('menu-toggle');
+  const navWrapper = document.getElementById('nav-wrapper');
 
-menuToggle.addEventListener('click', () => {
-    navWrapper.classList.toggle('show');
-});
+  menuToggle.addEventListener('click', function () {
+    navWrapper.classList.toggle('show-nav');
+    menuToggle.classList.toggle('active');
+  });
 
 
 // SECTION1
