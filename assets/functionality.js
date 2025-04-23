@@ -1,11 +1,29 @@
 // header
-  const menuToggle = document.getElementById('menu-toggle');
-  const navWrapper = document.getElementById('nav-wrapper');
+const menuToggle = document.getElementById('menu-toggle');
+const navWrapper = document.getElementById('nav-wrapper');
 
-  menuToggle.addEventListener('click', function () {
+menuToggle.addEventListener('click', function () {
     navWrapper.classList.toggle('show-nav');
     menuToggle.classList.toggle('active');
-  });
+});
+
+
+
+// Navbar highlight on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav a');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Remove the 'active' class from all nav items
+            navItems.forEach(navItem => navItem.classList.remove('active'));
+            
+            // Add the 'active' class to the clicked nav item
+            e.target.classList.add('active');
+        });
+    });
+});
+
 
 
 // SECTION1
@@ -294,3 +312,56 @@ function downloadBrochure() {
     link.click();
     document.body.removeChild(link);
 }
+
+//  ***************************** ABOUT PAGR ANIMATION *****************************
+// section-2
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+    trigger: ".section-about",
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+        // Animate image box from left
+        gsap.from("#founder-image", {
+            x: -100,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+        // Animate text content from right with stagger
+        gsap.from(".text-content > *", {
+            x: 100,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.2
+        });
+    }
+});
+
+// section-3
+gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: ".section-container",
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+      gsap.from(".left-content", {
+        x: -100,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power3.out"
+      });
+
+      gsap.from(".right-cards > div", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2
+      });
+    }
+  });
