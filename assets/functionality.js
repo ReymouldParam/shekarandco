@@ -10,14 +10,14 @@ menuToggle.addEventListener('click', function () {
 
 
 // Navbar highlight on scroll
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.nav a');
 
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             // Remove the 'active' class from all nav items
             navItems.forEach(navItem => navItem.classList.remove('active'));
-            
+
             // Add the 'active' class to the clicked nav item
             e.target.classList.add('active');
         });
@@ -240,44 +240,160 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // CAROUSELS OF OUR SERVICES
-$(document).ready(function () {
-    $('.responsive').slick({
-        dots: true,
-        infinite: true,
-        speed: 900,
-        arrows: true,
-        autoplay: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        prevArrow: '<button type="button" class="slick-prev custom-arrow"><i class="arrow left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next custom-arrow"><i class="arrow right"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+// $(document).ready(function () {
+//     $('.responsive').slick({
+//         dots: true,
+//         infinite: true,
+//         speed: 3000,
+//         arrows: true,
+//         autoplay: false,
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         prevArrow: '<button type="button" class="slick-prev custom-arrow"><i class="arrow left"></i></button>',
+//         nextArrow: '<button type="button" class="slick-next custom-arrow"><i class="arrow right"></i></button>',
+//         responsive: [
+//             {
+//                 breakpoint: 1024,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     slidesToScroll: 3,
+//                     infinite: true,
+//                     dots: true
+//                 }
+//             },
+//             {
+//                 breakpoint: 600,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 2
+//                 }
+//             },
+//             {
+//                 breakpoint: 480,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }
+//         ]
+//     });
+// });
+
+// BOOK Animation
+document.addEventListener("DOMContentLoaded", () => {
+    const groupedServices = [
+        {
+            containerId: "flipbook1",
+            pages: [
+                {
+                    title: "Audit & Assurance",
+                    image: "./assets/images/management.svg",
+                    items: ["Statutory Audit", "Internal Audit", "Tax Audit", "Management Audits"]
+                },
+                {
+                    title: "Income Tax",
+                    image: "./assets/images/management.svg",
+                    items: ["Tax Planning", "Return Filing", "Assessment Help", "TDS Compliance"]
+                },
+
+            ]
+        },
+        {
+            containerId: "flipbook2",
+            pages: [
+                {
+                    title: "Goods & Services Tax (GST)",
+                    image: "./assets/images/management.svg",
+                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+                },
+                {
+                    title: "Corporate Services",
+                    image: "./assets/images/management.svg",
+                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
                 }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+            ]
+        },
+        {
+            containerId: "flipbook3",
+            pages: [
+                {
+                    title: "Goods & Services Tax (GST)",
+                    image: "./assets/images/management.svg",
+                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+                },
+                {
+                    title: "Corporate Services",
+                    image: "./assets/images/management.svg",
+                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
                 }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+            ]
+        },
+        {
+            containerId: "flipbook4",
+            pages: [
+                {
+                    title: "Goods & Services Tax (GST)",
+                    image: "./assets/images/management.svg",
+                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+                },
+                {
+                    title: "Corporate Services",
+                    image: "./assets/images/management.svg",
+                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
                 }
-            }
-        ]
+            ]
+        }
+    ];
+
+    const pageFlips = [];
+
+    // Initialize books
+    groupedServices.forEach(({ containerId, pages }) => {
+        const container = document.getElementById(containerId);
+
+        pages.forEach(service => {
+            const page = document.createElement("div");
+            page.classList.add("page");
+            page.innerHTML = `
+                <img src="${service.image}" alt="Brochure Image" class="brochure-image">
+                <h3>${service.title}</h3>
+                <ul>${service.items.map(item => `<li>${item}</li>`).join("")}</ul>
+                <button class="know-more">Know More</button>
+            `;
+            container.appendChild(page);
+        });
+
+        const pageFlip = new St.PageFlip(container, {
+            width: 300,
+            height: 400,
+            size: "fixed",
+            showCover: false,
+            mobileScrollSupport: false,
+            flippingTime: 3000,
+        });
+
+        pageFlip.loadFromHTML(container.querySelectorAll(".page"));
+        pageFlips.push(pageFlip);
+
+        // 🔥 Open page with an angled look on initial load
+        setTimeout(() => {
+            pageFlip.flip(1);
+        }, 500);
     });
+
+    // Flip all books together every few seconds
+    let currentPage = 0;
+    const totalPages = groupedServices[0].pages.length;
+
+    setInterval(() => {
+        currentPage = (currentPage + 1) % totalPages;
+
+        pageFlips.forEach(flip => {
+            flip.flip(currentPage);
+        });
+    }, 4000);
 });
+
 // TESTIMONIALS SECTION ANIMATION
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".testimonial-card");
@@ -344,24 +460,24 @@ ScrollTrigger.create({
 // section-3
 gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.create({
+ScrollTrigger.create({
     trigger: ".section-container",
     start: "top 80%",
     once: true,
     onEnter: () => {
-      gsap.from(".left-content", {
-        x: -100,
-        opacity: 0,
-        duration: 1.4,
-        ease: "power3.out"
-      });
+        gsap.from(".left-content", {
+            x: -100,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power3.out"
+        });
 
-      gsap.from(".right-cards > div", {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.2
-      });
+        gsap.from(".right-cards > div", {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.2
+        });
     }
-  });
+});
