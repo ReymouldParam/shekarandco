@@ -239,46 +239,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 6000); // total cycle: 2.5s read time + 3.5s animation
 });
 
-// CAROUSELS OF OUR SERVICES
-// $(document).ready(function () {
-//     $('.responsive').slick({
-//         dots: true,
-//         infinite: true,
-//         speed: 3000,
-//         arrows: true,
-//         autoplay: false,
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         prevArrow: '<button type="button" class="slick-prev custom-arrow"><i class="arrow left"></i></button>',
-//         nextArrow: '<button type="button" class="slick-next custom-arrow"><i class="arrow right"></i></button>',
-//         responsive: [
-//             {
-//                 breakpoint: 1024,
-//                 settings: {
-//                     slidesToShow: 3,
-//                     slidesToScroll: 3,
-//                     infinite: true,
-//                     dots: true
-//                 }
-//             },
-//             {
-//                 breakpoint: 600,
-//                 settings: {
-//                     slidesToShow: 2,
-//                     slidesToScroll: 2
-//                 }
-//             },
-//             {
-//                 breakpoint: 480,
-//                 settings: {
-//                     slidesToShow: 1,
-//                     slidesToScroll: 1
-//                 }
-//             }
-//         ]
-//     });
-// });
-
 // BOOK Animation
 document.addEventListener("DOMContentLoaded", () => {
     const groupedServices = [
@@ -317,12 +277,12 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook3",
             pages: [
                 {
-                    title: "Goods & Services Tax (GST)",
+                    title: "Tax Services",
                     image: "./assets/images/management.svg",
                     items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
                 },
                 {
-                    title: "Corporate Services",
+                    title: "Accounting Services",
                     image: "./assets/images/management.svg",
                     items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
                 }
@@ -332,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook4",
             pages: [
                 {
-                    title: "Goods & Services Tax (GST)",
+                    title: "Professional Services",
                     image: "./assets/images/management.svg",
                     items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
                 },
@@ -369,7 +329,28 @@ document.addEventListener("DOMContentLoaded", () => {
             size: "fixed",
             showCover: false,
             mobileScrollSupport: false,
-            flippingTime: 3000,
+
+            // Smooth, elegant flipping
+            flippingTime: 6000,
+            flipDirection: 'top-right',
+
+            // THICK SHADOW EFFECT
+            maxShadowOpacity: 1,         // Very bold shadow
+            shadowColor: '#000000',         // Pure black for depth
+            shadowBlur: 45,                 // Soft & smooth edge spread
+            shadowOffset: 22,               // Deeper shadow offset
+
+            // Enhanced 3D and immersive look
+            perspective: 2500,              // Stronger 3D page bend
+            pageDepth: 4,                   // Make page feel thick & real
+
+            // Visual Enhancements
+            showPageCorners: true,
+            useHardwareAcceleration: true,
+            transformStyle: 'preserve-3d',
+            easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Luxury feel
+            drawShadow: true,
+
         });
 
         pageFlip.loadFromHTML(container.querySelectorAll(".page"));
@@ -377,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 🔥 Open page with an angled look on initial load
         setTimeout(() => {
-            pageFlip.flip(1);
+            pageFlip.flip(4);
         }, 500);
     });
 
@@ -391,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pageFlips.forEach(flip => {
             flip.flip(currentPage);
         });
-    }, 4000);
+    }, 8000);
 });
 
 // TESTIMONIALS SECTION ANIMATION
