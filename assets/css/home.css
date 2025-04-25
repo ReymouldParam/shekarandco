@@ -1669,11 +1669,14 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     width: 98%;
     margin: auto;
     display: flex;
-    flex-direction: row; /* Ensure horizontal layout */
+    flex-direction: row;
+    /* Ensure horizontal layout */
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Optional: allows wrapping on smaller screens */
-    gap: 20px; /* Optional: space between items */
+    flex-wrap: wrap;
+    /* Optional: allows wrapping on smaller screens */
+    gap: 20px;
+    /* Optional: space between items */
     padding: 30px;
 }
 
@@ -1721,18 +1724,20 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
 .brochure-image {
     width: 100%;
     max-width: 100px;
     height: auto;
     display: block;
-    border-radius: 8px; /* optional */
+    border-radius: 8px;
+    /* optional */
 }
 
 
 .page {
     padding: 30px;
-    font-family:'Poppins';
+    font-family: 'Poppins';
     background-color: white;
     height: 100%;
     box-sizing: border-box;
@@ -1757,6 +1762,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     border-radius: 25px;
     cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
     .our-service-con h2 {
         font-size: 20px;
