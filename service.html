@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font family -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/service.css" />
+</head>
+
+<body>
+    <div>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="/assets/images/Web-logo.svg" alt="CA India Logo">
+                    <div class="span-align">
+                        <span class="company-name"><b>SHEKAR & CO</b></span>
+                        <span class="tagline">CHARTERED ACCOUNTANTS</span>
+                    </div>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-wrapper" id="nav-wrapper">
+                    <nav class="nav">
+                        <a href=".">Home</a>
+                        <a href="./about.html">About Us</a>
+                        <a href="#">Services</a>
+                    </nav>
+                </div>
+                <div class="nav-wrapper" id="nav-wrapper">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div>
+                        <a href="./contact.html">
+                            <button class="contact-btn">CONTACT</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- section-1 -->
+        <section class="section-1">
+            <h2 class="abput-page-heading">
+                Services
+            </h2>
+        </section>
+        <!-- services section -->
+        <section class="services-section">
+            <div class="services-header">
+                <div class="our-service-left">
+                  <h2 class="our-service-head">Our Services</h2>
+                </div>
+                <div class="our-service-right">
+                  <p class="our-service-para">
+                    Our audit and assurances service offerings are based on a complete understanding of the clients’ business specifics.
+                  </p>
+                </div>
+              </div>
+              
+            <div class="services-container">
+                <!-- LEFT SIDEBAR -->
+                <aside class="services-menu">
+                    <!-- <h2>Our Services</h2> -->
+                    <ul>
+                        <li class="active" data-service="all" onclick="showService('all')">All</li>
+                        <li data-service="audit" onclick="showService('audit')">Audit & Assurance</li>
+                        <li data-service="income-tax" onclick="showService('income-tax')">Income Tax</li>
+                        <li data-service="gst" onclick="showService('gst')">Goods & Services Tax</li>
+                        <li data-service="business-support" onclick="showService('business-support')">Business Support
+                        </li>
+                        <li data-service="project-finance" onclick="showService('project-finance')">Project Finance</li>
+                    </ul>
+
+                </aside>
+                <!-- RIGHT CONTENT -->
+                <div class="services-content">
+                    <!-- Audit service -->
+                    <div class="service-card" data-service="audit">
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="assets/images/service-1.png" alt="Audit Image">
+                            </div>
+                            <div class="service-info">
+                                <h3>Audit & Assurance</h3>
+                                <ul>
+                                    <li>Statutory Audit</li>
+                                    <li>Internal Audit</li>
+                                    <li>Tax Audit</li>
+                                    <li>Management Audits</li>
+                                    <li>Financial and other Due Diligence for parties interested in partnerships,
+                                        takeovers, collaborations, etc</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-desc">
+                            “Auditing” is a systematic examination of financial statements through collection of
+                            sufficient and appropriate evidence with an intention of expressing an opinion whether the
+                            financial statements give true and fair picture or not.
+                        </div>
+                    </div>
+                    <!-- Income Tax -->
+                    <div class="service-card" data-service="income-tax">
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="assets/images/service-2.png" alt="Income Tax Image">
+                            </div>
+                            <div class="service-info">
+                                <h3>Income Tax</h3>
+                                <ul>
+                                    <li>Individual and Corporate Tax Filing</li>
+                                    <li>Tax Planning and Advisory</li>
+                                    <li>Representation before Tax Authorities</li>
+                                    <li>Advance Tax Computation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-desc">
+                            Our expert tax advisors help clients manage their tax obligations while optimizing returns
+                            in compliance with Indian tax laws.
+                        </div>
+                    </div>
+
+                    <!-- Goods & Services Tax -->
+                    <div class="service-card" data-service="gst">
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="assets/images/service-1.png" alt="GST Image">
+                            </div>
+                            <div class="service-info">
+                                <h3>Goods & Services Tax</h3>
+                                <ul>
+                                    <li>GST Registration & Filing</li>
+                                    <li>Input Tax Credit Reconciliation</li>
+                                    <li>GST Audit & Representation</li>
+                                    <li>Advisory on GST Law Compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-desc">
+                            We assist businesses with GST return filing, input tax reconciliation, audits, and resolving
+                            queries from the GST department.
+                        </div>
+                    </div>
+
+                    <!-- Business Support -->
+                    <div class="service-card" data-service="business-support">
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="assets/images/service-2.png" alt="Business Support Image">
+                            </div>
+                            <div class="service-info">
+                                <h3>Business Support</h3>
+                                <ul>
+                                    <li>Bookkeeping & Accounting</li>
+                                    <li>Payroll Processing</li>
+                                    <li>ROC Filing & Compliance</li>
+                                    <li>Company Secretarial Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-desc">
+                            Our business support team helps ensure your financial records are accurate, payrolls are
+                            compliant, and statutory filings are timely.
+                        </div>
+                    </div>
+
+                    <!-- Project Finance -->
+                    <div class="service-card" data-service="project-finance">
+                        <div class="service-box">
+                            <div class="service-image">
+                                <img src="assets/images/service-1.png" alt="Project Finance Image">
+                            </div>
+                            <div class="service-info">
+                                <h3>Project Finance</h3>
+                                <ul>
+                                    <li>Financial Feasibility Studies</li>
+                                    <li>Project Reports & CMA Data</li>
+                                    <li>Loan Syndication</li>
+                                    <li>Bank & Investor Presentations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-desc">
+                            We assist clients in preparing detailed project reports and liaising with banks and
+                            institutions for project funding.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- footer part -->
+        <section class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-map">
+                        <!-- <div class="footer-address-box">
+                    <p>
+                      📍 Plot No.81, Green Park Avenue,<br />
+                      Suchitra Circle, Jeedimetla Village,<br />
+                      Near Surabhi Pride Hotel,<br />
+                      Hyderabad - 500067
+                    </p>
+                  </div> -->
+                        <iframe
+                            src="https://maps.google.com/maps?q=Metro%20Cash%20and%20Carry%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="footer-form">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="footer-bottom">
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:sanda@shekarandco.com">sanda@shekarandco.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7093288864</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>Copyright © 2025. All rights reserved.</p>
+            </div>
+        </section>
+    </div>
+    <!-- jQuery (modern version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/functionality.js">
+    </script>
+
+</body>
+
+</html>

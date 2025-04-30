@@ -446,19 +446,52 @@ ScrollTrigger.create({
     start: "top 80%",
     once: true,
     onEnter: () => {
-        gsap.from(".left-content", {
+        const tl = gsap.timeline();
+
+        // Left content animation
+        tl.from(".left-content", {
             x: -100,
             opacity: 0,
-            duration: 1.4,
-            ease: "power3.out"
+            duration: 1.2,
+            ease: "power4.out"
         });
 
-        gsap.from(".right-cards > div", {
-            y: 60,
+        // Right-side cards animation after left-content
+        tl.from(".info-cards-grid > div", {
+            y: 40,
             opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.2
-        });
+            scale: 0.95,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+            stagger: {
+                each: 0.2,
+                from: "start"
+            }
+        }, "-=0.3"); // slight overlap for a smoother sequence
     }
 });
+
+
+// ************************* Service page animation *************************
+
+// service section animation
+function showService(serviceId) {
+    // Clear all active menu items
+    document.querySelectorAll('.services-menu li').forEach(li => li.classList.remove('active'));
+
+    // Set active menu item based on data-service
+    const activeTab = document.querySelector(`.services-menu li[data-service="${serviceId}"]`);
+    if (activeTab) activeTab.classList.add('active');
+
+    // Toggle cards
+    document.querySelectorAll('.service-card').forEach(card => {
+        const type = card.getAttribute('data-service');
+        if (serviceId === 'all' || type === serviceId) {
+            card.classList.add('show');
+        } else {
+            card.classList.remove('show');
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', () => showService('all'));

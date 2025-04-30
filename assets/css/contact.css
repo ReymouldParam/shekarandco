@@ -54,7 +54,7 @@
   
   .info-item {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 15px;
   }
   
