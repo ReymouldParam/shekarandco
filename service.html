@@ -63,147 +63,157 @@
         </section>
         <!-- services section -->
         <section class="services-section">
-            <div class="services-header">
-                <div class="our-service-left">
-                    <h2 class="our-service-head">Our Services</h2>
-                </div>
-                <div class="our-service-right">
-                    <p class="our-service-para">
-                        Our audit and assurances service offerings are based on a complete understanding of the clients’
-                        business specifics.
-                    </p>
-                </div>
-            </div>
-
             <div class="services-container">
                 <!-- LEFT SIDEBAR -->
                 <aside class="services-menu">
-                    <!-- <h2>Our Services</h2> -->
-                    <ul>
-                        <li class="active" data-service="all" onclick="showService('all')">All</li>
-                        <li data-service="audit" onclick="showService('audit')">Audit & Assurance</li>
-                        <li data-service="income-tax" onclick="showService('income-tax')">Income Tax</li>
-                        <li data-service="gst" onclick="showService('gst')">Goods & Services Tax</li>
-                        <li data-service="business-support" onclick="showService('business-support')">Business Support
-                        </li>
-                        <li data-service="project-finance" onclick="showService('project-finance')">Project Finance</li>
-                    </ul>
+                    <div style="display: flex;flex-direction: column;">
+                        <div class="our-service-left">
+                            <h2 class="our-service-head">Our Services</h2>
+                        </div>
+                        <!-- <h2>Our Services</h2> -->
+                        <ul>
+                            <li class="active" data-service="all" onclick="showService('all')">All</li>
+                            <li data-service="audit" onclick="showService('audit')">Audit & Assurance</li>
+                            <li data-service="income-tax" onclick="showService('income-tax')">Income Tax</li>
+                            <li data-service="gst" onclick="showService('gst')">Goods & Services Tax</li>
+                            <li data-service="business-support" onclick="showService('business-support')">Business
+                                Support
+                            </li>
+                            <li data-service="project-finance" onclick="showService('project-finance')">Project Finance
+                            </li>
+                        </ul>
+                    </div>
 
                 </aside>
                 <!-- RIGHT CONTENT -->
+                 <div style="display: flex; flex-direction: column;">
+                <div class="our-service-right">
+                    <p class="our-service-para">
+                        Our audit and assurances service offerings are based on a complete understanding of the
+                        clients’
+                        business specifics.
+                    </p>
+                </div>
                 <div class="services-content">
-                    <!-- Audit service -->
-                    <div class="service-card" data-service="audit">
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="assets/images/service-1.png" alt="Audit Image">
+                        <div>
+                            <!-- Audit service -->
+                            <div class="service-card" data-service="audit">
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="assets/images/service-1.png" alt="Audit Image">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Audit & Assurance</h3>
+                                        <ul>
+                                            <li>Statutory Audit</li>
+                                            <li>Internal Audit</li>
+                                            <li>Tax Audit</li>
+                                            <li>Management Audits</li>
+                                            <li>Financial and other Due Diligence for parties interested in
+                                                partnerships,
+                                                takeovers, collaborations, etc</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-desc">
+                                    “Auditing” is a systematic examination of financial statements through collection of
+                                    sufficient and appropriate evidence with an intention of expressing an opinion
+                                    whether the
+                                    financial statements give true and fair picture or not.
+                                </div>
                             </div>
-                            <div class="service-info">
-                                <h3>Audit & Assurance</h3>
-                                <ul>
-                                    <li>Statutory Audit</li>
-                                    <li>Internal Audit</li>
-                                    <li>Tax Audit</li>
-                                    <li>Management Audits</li>
-                                    <li>Financial and other Due Diligence for parties interested in partnerships,
-                                        takeovers, collaborations, etc</li>
-                                </ul>
+                            <!-- Income Tax -->
+                            <div class="service-card" data-service="income-tax">
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="assets/images/service-2.png" alt="Income Tax Image">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Income Tax</h3>
+                                        <ul>
+                                            <li>Individual and Corporate Tax Filing</li>
+                                            <li>Tax Planning and Advisory</li>
+                                            <li>Representation before Tax Authorities</li>
+                                            <li>Advance Tax Computation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-desc">
+                                    Our expert tax advisors help clients manage their tax obligations while optimizing
+                                    returns
+                                    in compliance with Indian tax laws.
+                                </div>
                             </div>
-                        </div>
-                        <div class="service-desc">
-                            “Auditing” is a systematic examination of financial statements through collection of
-                            sufficient and appropriate evidence with an intention of expressing an opinion whether the
-                            financial statements give true and fair picture or not.
-                        </div>
-                    </div>
-                    <!-- Income Tax -->
-                    <div class="service-card" data-service="income-tax">
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="assets/images/service-2.png" alt="Income Tax Image">
-                            </div>
-                            <div class="service-info">
-                                <h3>Income Tax</h3>
-                                <ul>
-                                    <li>Individual and Corporate Tax Filing</li>
-                                    <li>Tax Planning and Advisory</li>
-                                    <li>Representation before Tax Authorities</li>
-                                    <li>Advance Tax Computation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-desc">
-                            Our expert tax advisors help clients manage their tax obligations while optimizing returns
-                            in compliance with Indian tax laws.
-                        </div>
-                    </div>
 
-                    <!-- Goods & Services Tax -->
-                    <div class="service-card" data-service="gst">
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="assets/images/service-1.png" alt="GST Image">
+                            <!-- Goods & Services Tax -->
+                            <div class="service-card" data-service="gst">
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="assets/images/service-1.png" alt="GST Image">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Goods & Services Tax</h3>
+                                        <ul>
+                                            <li>GST Registration & Filing</li>
+                                            <li>Input Tax Credit Reconciliation</li>
+                                            <li>GST Audit & Representation</li>
+                                            <li>Advisory on GST Law Compliance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-desc">
+                                    We assist businesses with GST return filing, input tax reconciliation, audits, and
+                                    resolving
+                                    queries from the GST department.
+                                </div>
                             </div>
-                            <div class="service-info">
-                                <h3>Goods & Services Tax</h3>
-                                <ul>
-                                    <li>GST Registration & Filing</li>
-                                    <li>Input Tax Credit Reconciliation</li>
-                                    <li>GST Audit & Representation</li>
-                                    <li>Advisory on GST Law Compliance</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-desc">
-                            We assist businesses with GST return filing, input tax reconciliation, audits, and resolving
-                            queries from the GST department.
-                        </div>
-                    </div>
 
-                    <!-- Business Support -->
-                    <div class="service-card" data-service="business-support">
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="assets/images/service-2.png" alt="Business Support Image">
+                            <!-- Business Support -->
+                            <div class="service-card" data-service="business-support">
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="assets/images/service-2.png" alt="Business Support Image">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Business Support</h3>
+                                        <ul>
+                                            <li>Bookkeeping & Accounting</li>
+                                            <li>Payroll Processing</li>
+                                            <li>ROC Filing & Compliance</li>
+                                            <li>Company Secretarial Services</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-desc">
+                                    Our business support team helps ensure your financial records are accurate, payrolls
+                                    are
+                                    compliant, and statutory filings are timely.
+                                </div>
                             </div>
-                            <div class="service-info">
-                                <h3>Business Support</h3>
-                                <ul>
-                                    <li>Bookkeeping & Accounting</li>
-                                    <li>Payroll Processing</li>
-                                    <li>ROC Filing & Compliance</li>
-                                    <li>Company Secretarial Services</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="service-desc">
-                            Our business support team helps ensure your financial records are accurate, payrolls are
-                            compliant, and statutory filings are timely.
-                        </div>
-                    </div>
 
-                    <!-- Project Finance -->
-                    <div class="service-card" data-service="project-finance">
-                        <div class="service-box">
-                            <div class="service-image">
-                                <img src="assets/images/service-1.png" alt="Project Finance Image">
-                            </div>
-                            <div class="service-info">
-                                <h3>Project Finance</h3>
-                                <ul>
-                                    <li>Financial Feasibility Studies</li>
-                                    <li>Project Reports & CMA Data</li>
-                                    <li>Loan Syndication</li>
-                                    <li>Bank & Investor Presentations</li>
-                                </ul>
+                            <!-- Project Finance -->
+                            <div class="service-card" data-service="project-finance">
+                                <div class="service-box">
+                                    <div class="service-image">
+                                        <img src="assets/images/service-1.png" alt="Project Finance Image">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Project Finance</h3>
+                                        <ul>
+                                            <li>Financial Feasibility Studies</li>
+                                            <li>Project Reports & CMA Data</li>
+                                            <li>Loan Syndication</li>
+                                            <li>Bank & Investor Presentations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service-desc">
+                                    We assist clients in preparing detailed project reports and liaising with banks and
+                                    institutions for project funding.
+                                </div>
                             </div>
                         </div>
-                        <div class="service-desc">
-                            We assist clients in preparing detailed project reports and liaising with banks and
-                            institutions for project funding.
-                        </div>
-                    </div>
-
+                </div>
                 </div>
             </div>
         </section>

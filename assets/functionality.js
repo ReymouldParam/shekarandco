@@ -12,17 +12,19 @@ menuToggle.addEventListener('click', function () {
 // Navbar highlight on scroll
 document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.nav a');
+    const currentPath = window.location.pathname;
 
     navItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-            // Remove the 'active' class from all nav items
-            navItems.forEach(navItem => navItem.classList.remove('active'));
+        const itemPath = new URL(item.href).pathname;
 
-            // Add the 'active' class to the clicked nav item
-            e.target.classList.add('active');
-        });
+        if (itemPath === currentPath) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
     });
 });
+
 
 
 

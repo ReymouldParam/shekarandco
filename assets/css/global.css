@@ -8,10 +8,11 @@ body {
     box-sizing: border-box;
     font-family: "Poppins";
 }
-:root{
-    --heading1:50px;
-    --heading2:24px;
-    --para-heading:18px
+
+:root {
+    --heading1: 50px;
+    --heading2: 24px;
+    --para-heading: 18px
 }
 
 .header {
@@ -72,7 +73,7 @@ body {
 }
 
 .nav a.active {
-    color:#0c5d9d;
+    color: #0c5d9d;
     font-weight: bold;
     position: relative;
 }
@@ -141,6 +142,11 @@ body {
     background-color: #004080;
     color: white;
 }
+
+.mobile-contact-btn {
+    display: none !important;
+}
+
 
 .menu-toggle {
     display: none;
@@ -244,6 +250,10 @@ body {
     .contact-btn {
         align-self: center;
         margin-top: 10px;
+    }
+
+    .mobile-contact-btn {
+        display: block !important;
     }
 }
 
@@ -377,7 +387,7 @@ hr {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size:var(--para-heading);
+    font-size: var(--para-heading);
     color: #003366;
 }
 
@@ -416,7 +426,7 @@ hr {
 .footer-copy {
     text-align: center;
     color: #000;
-    font-size:var(--para-heading);
+    font-size: var(--para-heading);
     margin-top: 10px;
 }
 
@@ -458,11 +468,11 @@ hr {
 
     .footer-form input {
         width: 100%;
-        border-radius:20px;
+        border-radius: 20px;
     }
 
     .footer-form button {
-        width:20%;
+        width: 20%;
         margin-top: 10px;
         margin: auto;
         font-weight: normal;

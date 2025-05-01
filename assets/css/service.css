@@ -31,50 +31,48 @@
   border-bottom: 1px solid #bcd9ef;
 }
 
-.services-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 0;
-  background: #fff;
-  border-top: 2px solid #00428c;
-  border-bottom: 1px solid #ccc;
-}
 
-.our-service-left,
-.our-service-right {
-  /* flex: 1; */
-  padding: 25px 10px;
-  border-left: 3px solid #00428c;
-}
 
 .our-service-left {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border-left: none;
-  margin-left: 4%;
-  padding: 10px;
+  /* margin-left: 4%; */
+  padding-top: 20px;
+  font-size: 32px;
 }
 
 .our-service-head {
-  font-size: 31px;
+  font-size: 34px;
   color: #00428c;
   margin: 0;
 }
 
+.our-service-right {
+  position: sticky;
+  top: 0;
+  /* adjust based on your header height */
+  background: white;
+  z-index: 10;
+  padding-right: 2%;
+  border-bottom: 1.5px solid #00428c;
+}
+
 .our-service-para {
-  font-size: 18px;
+  font-size: 20px;
   color: #00428c;
   line-height: 1.6;
   margin: 0;
+  padding: 10px;
+  background-color: white;
 }
 
 
 .services-menu {
-  flex: 0 0 280px;
+  flex: 0 0 310px;
   background: #fff;
-  padding: 30px 20px;
+  padding: 0px 20px;
   border-right: 2px solid #00428c;
   position: sticky;
   top: 0;
@@ -90,7 +88,7 @@
 .services-menu h2 {
   color: #00428c;
   margin-bottom: 25px;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .services-menu ul {
@@ -137,9 +135,9 @@
   color: #003366;
   transform: translateY(-3px) scale(1.03);
   box-shadow:
-    0 6px 12px rgba(0, 0, 0, 0.50),
+    0 6px 12px rgba(0, 0, 0, 0.30),
     /* strong outer shadow */
-    inset 0 4px 6px rgba(255, 255, 255, 0.4);
+    inset 0 4px 6px rgba(255, 255, 255, 0.2);
   /* soft inner highlight */
   border: 1px solid #cbe4f8;
   transform-style: preserve-3d;
@@ -148,7 +146,7 @@
 
 .services-content {
   flex: 1;
-  padding: 30px 40px;
+  padding: 15px 40px;
   background: #d8ecf9;
   border-top: 2px solid #00428c;
   border-left: 1px solid #00428c;
@@ -222,4 +220,402 @@
   line-height: 1.6;
   background: #d8ecf9;
   border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Styles for Services Page */
+
+/* HD Screens (1366x768) */
+@media screen and (max-width: 1366px) {
+  .services-container {
+    padding: 0 2rem;
+  }
+
+  .service-box {
+    padding: 1.5rem;
+  }
+
+  .service-image img {
+    max-width: 250px;
+  }
+}
+
+/* Full HD Screens (1920x1080) */
+@media screen and (min-width: 1920px) {
+  .services-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .services-container {
+    display: flex;
+    border-top: 1px solid #bcd9ef;
+    border-bottom: 1px solid #bcd9ef;
+  }
+
+  .services-header {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: stretch;
+    padding: 0;
+    background: #fff;
+    border-top: 2px solid #00428c;
+    border-bottom: 1px solid #ccc;
+    /* margin-left:-2%; */
+  }
+
+
+  .service-box {
+    padding: 2.5rem;
+  }
+
+  .service-image img {
+    max-width: 300px;
+  }
+}
+
+/* Mac Devices (1440x900) */
+@media screen and (max-width: 1440px) {
+  .services-container {
+    padding: 0 0rem;
+  }
+
+  .service-box {
+    padding: 1.25rem;
+  }
+
+  .service-image img {
+    max-width: 220px;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+  .services-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .services-menu {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .services-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .services-menu li {
+    padding: 0.5rem 1rem;
+  }
+
+  .service-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .service-info ul {
+    text-align: left;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .our-service-left,
+  .our-service-right {
+    width: 100%;
+  }
+
+  .services-menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-box {
+    padding: 1rem;
+  }
+
+  .service-image img {
+    max-width: 200px;
+  }
+
+  .service-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-info ul {
+    font-size: 0.9rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  .section-1 {
+    padding: 1rem 0;
+  }
+
+  .abput-page-heading {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .services-section {
+    padding: 1rem;
+  }
+
+  .services-header {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .our-service-left,
+  .our-service-right {
+    width: 100%;
+    padding: 1rem;
+    border-left: none;
+    text-align: center;
+  }
+
+  .our-service-head {
+    font-size: 1.5rem;
+  }
+
+  .our-service-para {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .services-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .services-menu {
+    width: 100%;
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 2px solid #00428c;
+    position: relative;
+  }
+
+  .services-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .services-menu li {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .services-content {
+    padding: 1rem;
+  }
+
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .service-box {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .service-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .service-info {
+    width: 100%;
+  }
+
+  .service-info h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-info ul {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .service-info ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    padding: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Medium Mobile Devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .section-1 {
+    padding: 1.5rem 0;
+  }
+
+  .abput-page-heading {
+    font-size: 2.5rem;
+  }
+
+  .services-section {
+    padding: 1.5rem;
+  }
+
+  .services-header {
+    padding: 1.5rem;
+  }
+
+  .our-service-head {
+    font-size: 1.75rem;
+  }
+
+  .our-service-para {
+    font-size: 1rem;
+  }
+
+  .services-menu {
+    padding: 1.5rem;
+  }
+
+  .services-menu li {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .service-box {
+    padding: 1.5rem;
+  }
+
+  .service-image img {
+    max-width: 250px;
+  }
+
+  .service-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-info ul {
+    font-size: 1rem;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services-menu {
+    width: 100%;
+    padding: 2rem;
+    border-right: none;
+    border-bottom: 2px solid #00428c;
+  }
+
+  .services-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .services-menu li {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .service-box {
+    padding: 2rem;
+  }
+
+  .service-image img {
+    max-width: 300px;
+  }
+}
+
+/* HD Screens (1025px - 1366px) */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .services-container {
+    padding: 0 0rem;
+  }
+
+  .service-box {
+    padding: 1rem;
+  }
+
+  .service-image img {
+    max-width: 350px;
+  }
+}
+
+/* Full HD Screens (1367px - 1920px) */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  .services-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .service-box {
+    padding: 2.5rem;
+  }
+
+  .service-image img {
+    max-width: 500px;
+  }
+}
+
+/* 4K Screens (1921px and above) */
+@media screen and (min-width: 1921px) {
+  .services-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .service-box {
+    padding: 3rem;
+  }
+
+  .service-image img {
+    max-width: 350px;
+  }
 }

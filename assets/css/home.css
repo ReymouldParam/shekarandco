@@ -9,7 +9,7 @@
     padding: 2%;
     width: 95%;
     margin: auto;
-    background-image: url('./images/background-img.png');
+    background-image: url('../images/background-img.png');
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 2%;
@@ -262,6 +262,7 @@
     text-align: center;
     width: fit-content;
     margin-top: -160px;
+    opacity: 0.6;
 }
 
 .stat-item {
@@ -290,6 +291,7 @@
     font-size: var(--heading2);
     cursor: pointer;
     width: 600px;
+    opacity: 0.6;
 
 }
 
@@ -678,7 +680,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
         padding: 2%;
         width: 90%;
         margin: auto;
-        background-image: url('./images/background-img.png');
+        background-image: url('../images/background-img.png');
         background-size: cover;
         background-repeat: no-repeat;
         margin-top: 2%;

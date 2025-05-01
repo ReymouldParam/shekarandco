@@ -20,8 +20,9 @@
 
 .contact-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 50px;
+    gap: 2%;
     background-color: #fff;
     color: #1c1c1c;
   }
@@ -162,12 +163,12 @@
 /* Full HD (1920x1080) Responsiveness */
 @media screen and (min-width: 1920px) {
     .contact-section {
-        padding: 60px 50px;
+        padding: 40px 100px;
         gap: 50px;
     }
 
     .contact-info {
-        padding: 40px;
+        padding:0px;
     }
 
     .contact-info h2 {
