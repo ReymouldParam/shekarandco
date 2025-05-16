@@ -460,7 +460,7 @@ hr {
 .pop-up-heading {
     font-size: 36px;
     font-weight: 700;
-    color:#004080;
+    color: #004080;
     /* Theme orange */
     margin-bottom: 15px;
 }
@@ -492,6 +492,8 @@ hr {
 .close-btn:hover {
     background-color: #004080;
 }
+
+
 
 @media (max-width: 600px) {
     .popup {
@@ -1028,4 +1030,34 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
         margin-top: 10px;
     }
 
+}
+
+/********************* whatsapp container */
+.whatsapp-container {
+    position:fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.whatsapp-container i {
+    font-size: 40px;
+    color: #25D366;
+    display: inline-block;
+    animation: whatsappbeat 1.5s infinite;
+}
+
+@keyframes whatsappbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
