@@ -90,19 +90,19 @@
 
             <div class="contact-right">
                 <h3>Send Us a Message</h3>
-                <form class="contact-form">
+                <form class="contact-form" action="./contact.php" method="POST">
                     <div class="input-row">
-                        <input type="text" placeholder="Enter Your Name" />
-                        <input type="text" placeholder="Enter Your Number" />
+                        <input name="name" type="text" placeholder="Enter Your Name" />
+                        <input name="number" type="text" placeholder="Enter Your Number" />
                     </div>
-                    <input type="email" placeholder="Enter Your Email" />
-                    <select>
+                    <input name="email" type="email" placeholder="Enter Your Email" />
+                    <select name="service">
                         <option>Services</option>
                         <option>Tax Consultation</option>
                         <option>Audit Services</option>
                         <option>Investment Advice</option>
                     </select>
-                    <textarea placeholder="Enter Your Message"></textarea>
+                    <textarea name="message"  placeholder="Enter Your Message"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -144,7 +144,14 @@
                 <p>Copyright © 2025. All rights reserved.</p>
             </div>
         </section>
+        <!-- popup -->
+          <div id="popup-message" class="popup">
+            <h2 id="popup-heading" class="pop-up-heading"></h2>
+            <p id="popup-para" class="pop-up-para"></p>
+            <button id="close-popup" class="close-btn">Close</button>
+        </div>
     </div>
+    <script src="assets/email.js"></script>
 </body>
 
 </html>
