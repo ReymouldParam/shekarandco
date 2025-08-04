@@ -43,10 +43,10 @@
 }
 
 .text-box h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .blue-text {
@@ -62,7 +62,7 @@
     font-size: var(--heading2);
     font-weight: 600;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .desc {
@@ -253,7 +253,7 @@
 }
 
 .stats-section {
-    background-color: #0f5d9d;
+    background-color: #004aad;
     color: #fff;
     display: flex;
     border-radius: 15px;
@@ -262,7 +262,7 @@
     text-align: center;
     width: fit-content;
     margin-top: -160px;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .stat-item {
@@ -291,7 +291,7 @@
     font-size: var(--heading2);
     cursor: pointer;
     width: 600px;
-    opacity: 0.6;
+    opacity: 1;
 
 }
 
@@ -672,7 +672,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     }
 }
 
-/* ✅ Full HD / High-Res Laptops & Desktops (Effective width 1536px and above) */
+/*  Full HD / High-Res Laptops & Desktops (Effective width 1536px and above) */
 @media screen and (min-width: 1920px) {
     .business-container {
         background-color: #fff;
@@ -1665,6 +1665,8 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     color: white;
     font-size: var(--para-heading);
     font-family: "Poppins";
+    width: 80%;
+    text-align: center;
 }
 
 .responsive {

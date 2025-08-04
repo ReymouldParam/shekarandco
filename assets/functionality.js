@@ -248,14 +248,14 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook1",
             pages: [
                 {
-                    title: "Audit & Assurance",
+                    title: "Audit and Assurance",
                     image: "./assets/images/management.svg",
-                    items: ["Statutory Audit", "Internal Audit", "Tax Audit", "Management Audits"]
+                    items: ["Statutory Audit", "Tax Audit", "Internal Audit", "Concurrent Audit", "Management Audit", "Stock Audit"]
                 },
                 {
                     title: "Income Tax",
                     image: "./assets/images/management.svg",
-                    items: ["Tax Planning", "Return Filing", "Assessment Help", "TDS Compliance"]
+                    items: ["Income Tax Returns Of Individuals, Partnership Firm, Company etc.", "Income tax Notices and Appeals  representation/Heading Litigation and Appeals", "Tax Planning and Advisory", "International Taxation and Transfer Pricing", "Assessment and Compliance Support"]
                 },
 
             ]
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook2",
             pages: [
                 {
-                    title: "Goods & Services Tax (GST)",
+                    title: "Income Tax ",
                     image: "./assets/images/management.svg",
                     items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
                 },
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook3",
             pages: [
                 {
-                    title: "Tax Services",
+                    title: "Good and Services Tax",
                     image: "./assets/images/management.svg",
                     items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
                 },
@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook4",
             pages: [
                 {
-                    title: "Professional Services",
+                    title: "Accounting",
                     image: "./assets/images/management.svg",
                     items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
                 },
