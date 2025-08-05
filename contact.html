@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="/assets/images/Web-logo.svg" />
     <title>Contact</title>
     <!-- global css -->
     <link rel="stylesheet" href="assets/css/global.css" />
@@ -23,7 +24,7 @@
         <header class="header">
             <div class="container">
                 <div class="logo">
-                    <a href="./index.html"><img src="/assets/images/Web-logo.svg" alt="CA India Logo"></a>
+                    <a href="./index"><img src="/assets/images/Web-logo.svg" alt="CA India Logo"></a>
                     <div class="span-align">
                         <span class="company-name"><b>SHEKAR & CO</b></span>
                         <span class="tagline">CHARTERED ACCOUNTANTS</span>
@@ -37,19 +38,21 @@
                 <div class="nav-wrapper" id="nav-wrapper">
                     <nav class="nav">
                         <a href=".">Home</a>
-                        <a href="./about.html">About Us</a>
-                        <a href="./service.html">Services</a>
+                        <a href="./about">About Us</a>
+                        <a href="./service">Services</a>
                     </nav>
                 </div>
                 <div class="nav-wrapper" id="nav-wrapper">
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/shekarandco?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/shekarandco?igsh=N3k5cXk5eG5tbmY="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/shekarandco?mibextid=rS40aB7S9Ucbxw6v"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/shekarandco?igsh=N3k5cXk5eG5tbmY="><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/shekar-and-co/"><i class="fab fa-linkedin"></i></a>
                         <!-- <a href="#"><i class="fab fa-pinterest"></i></a> -->
                     </div>
                     <div>
-                        <a href="./contact.html">
+                        <a href="./contact">
                             <button class="contact-btn">CONTACT</button>
                         </a>
                     </div>
@@ -102,7 +105,7 @@
                         <option>Audit Services</option>
                         <option>Investment Advice</option>
                     </select>
-                    <textarea name="message"  placeholder="Enter Your Message"></textarea>
+                    <textarea name="message" placeholder="Enter Your Message"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -112,12 +115,12 @@
             <div class="footer-container">
                 <div class="footer-top">
                     <div class="footer-map">
-                         <iframe
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.028083320478!2d78.4743374741441!3d17.506172799374315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90a7bc655b8d%3A0x483a043d1ba37e8b!2sShekar%20and%20Co.!5e0!3m2!1sen!2sin!4v1747395343021!5m2!1sen!2sin"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                   <form class="footer-form" action="./email.php" method="post">
+                    <form class="footer-form" action="./email.php" method="post">
                         <input type="email" name="email" placeholder="Email Address" required />
                         <button type="submit">Send</button>
                     </form>
@@ -135,8 +138,10 @@
                         <span>+91 7093288864</span>
                     </div>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/shekarandco?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/shekarandco?igsh=N3k5cXk5eG5tbmY="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/shekarandco?mibextid=rS40aB7S9Ucbxw6v"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/shekarandco?igsh=N3k5cXk5eG5tbmY="><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/shekar-and-co/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
@@ -146,15 +151,22 @@
             </div>
         </section>
         <!-- popup -->
-          <div id="popup-message" class="popup">
+        <div id="popup-message" class="popup">
             <h2 id="popup-heading" class="pop-up-heading"></h2>
             <p id="popup-para" class="pop-up-para"></p>
             <button id="close-popup" class="close-btn">Close</button>
         </div>
     </div>
-     <div class="whatsapp-container">
+    <!-- WhatsApp Floating Icon -->
+    <div class="whatsapp-container">
         <a href="https://wa.me/7093288864" target="_blank">
             <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
+    <div class="call-us-float">
+        <a href="tel:+917093288864" class="call-us-link" title="Call Us">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Us</span>
         </a>
     </div>
 

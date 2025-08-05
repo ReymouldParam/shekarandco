@@ -159,7 +159,7 @@
 
 /* ---------- Image Container & Internal Scroll Animation ---------- */
 .image-container {
-    height: 250px;
+    height: 300;
     /* Increased image container height to 300px */
     overflow: hidden;
     border-radius: 25px;
@@ -170,8 +170,9 @@
 /* Animate the image to scroll upward within its container */
 /* You can enable this animation by setting a value for "animation" if needed */
 .image-container img {
-    /* width: 100%; */
+    width: 100%;
     animation: none;
+    object-fit: cover;
 }
 
 /* Keyframes for the internal image scroll */
@@ -1741,7 +1742,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 
 .page {
-    padding:0px;
+    padding: 0px;
     padding-left: 25px;
     padding-top: 4px;
     font-family: 'Poppins';
@@ -1948,16 +1949,16 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .clinets-aling {
     background-color: white;
-    margin: 0 auto;
-    max-width: 1300px;
+    /* margin: 0 auto; */
+    /* max-width: 1300px; */
     border-radius: 40px;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
-    gap: 100px;
+    gap: 5%;
 }
 
 .clients-container h2 {
@@ -2002,19 +2003,50 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     margin-bottom: 30px;
 }
 
+.scroll-container {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ccc;
+    /* optional */
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 20s linear infinite;
+}
+
 .logos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    align-items: center;
     justify-items: center;
-    overflow-y: auto;
 }
 
 .logos-grid img {
     max-height: 80px;
     max-width: 100%;
     object-fit: contain;
+    border-radius: 5px;
+    transition: transform 20s ease-out;
+}
+
+.logos-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
 }
 
 /* Mobile responsive for Clients section */
@@ -2411,7 +2443,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 /* Container Flex Layout */
 .testimonial-container {
-    max-width: 1200px;
+    /* max-width: 100%; */
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -2510,6 +2542,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     font-size: var(--para-heading);
     font-weight: 700;
     margin: 0;
+    font-size: 30px;
 }
 
 .testimonial-card .company {
