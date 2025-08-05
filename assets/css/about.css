@@ -53,6 +53,10 @@
     background: #d9d9d9;
     border-bottom-left-radius: 80px;
     z-index: 2;
+    background-image: url('../images/Shekar-and-co-Ceo.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #0056a0;
 }
 
 .text-content {
