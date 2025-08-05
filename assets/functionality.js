@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "Income Tax",
                     image: "./assets/images/management.svg",
-                    items: ["Income Tax Returns Of Individuals, Partnership Firm, Company etc.", "Income tax Notices and Appeals  representation/Heading Litigation and Appeals", "Tax Planning and Advisory", "International Taxation and Transfer Pricing", "Assessment and Compliance Support"]
+                    items: ["Income Tax Returns of Individuals, Partnership Firm, Company etc., Income tax Notices and Appeals representation/Handing Litigation and Appeals, Company etc.","Tax Planning and Advisory","International Taxation and Transfer Pricing"]
                 },
 
             ]
@@ -264,14 +264,14 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook2",
             pages: [
                 {
-                    title: "Income Tax ",
+                    title: "Goods and Services Tax ",
                     image: "./assets/images/management.svg",
-                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+                    items: ["GST Registration Services", "GST Return Filling and Compliance", "Representation and Litigation Support", "GST Refund Assistance","Input Tax Credit Management"]
                 },
                 {
-                    title: "Corporate Services",
+                    title: "Accounting",
                     image: "./assets/images/management.svg",
-                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
+                    items: ["Book Keeping and Financial Accounting", "Finalization of Accounts", "Preparation of Financial Statements", "Payroll Accounting and Compliance","Accounts Receivable and Payable Management"]
                 }
             ]
         },
@@ -294,14 +294,14 @@ document.addEventListener("DOMContentLoaded", () => {
             containerId: "flipbook4",
             pages: [
                 {
-                    title: "Accounting",
+                    title: "Business Advisory and CFO Services",
                     image: "./assets/images/management.svg",
-                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+                    items: ["Business Structuring & Entity Setup Advisory", "Financial Planning & Forecasting", "Cost Optimization & Profitability Improvement", "Budgeting and Variance Analysis"]
                 },
                 {
-                    title: "Corporate Services",
+                    title: "Due Diligence and Valuation",
                     image: "./assets/images/management.svg",
-                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
+                    items: ["Financial Due Diligence", "Financial Due Diligence", "Legal and Secretarial Due Diligence", "Valuation of Business/ Shares","Valuation of Merger and Demerger"]
                 }
             ]
         }
@@ -320,14 +320,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${service.image}" alt="Brochure Image" class="brochure-image">
                 <h3>${service.title}</h3>
                 <ul>${service.items.map(item => `<li>${item}</li>`).join("")}</ul>
-                <button class="know-more">Know More</button>
+                <a href="./service.html"><button class="know-more">Know More</button></a>
             `;
             container.appendChild(page);
         });
 
         const pageFlip = new St.PageFlip(container, {
             width: 300,
-            height: 400,
+            height: 450,
             size: "fixed",
             showCover: false,
             mobileScrollSupport: false,

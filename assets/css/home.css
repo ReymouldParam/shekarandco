@@ -1740,7 +1740,9 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 
 .page {
-    padding: 30px;
+    padding:0px;
+    padding-left: 25px;
+    padding-top: 4px;
     font-family: 'Poppins';
     background-color: white;
     height: 100%;
@@ -1749,12 +1751,12 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
 
 .page h3 {
     color: #003366;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 }
 
 .page ul {
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .know-more {
