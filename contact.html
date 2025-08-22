@@ -95,19 +95,34 @@
                 <h3>Send Us a Message</h3>
                 <form class="contact-form" action="./contact.php" method="POST">
                     <div class="input-row">
-                        <input name="name" type="text" placeholder="Enter Your Name" />
-                        <input name="number" type="text" placeholder="Enter Your Number" />
+                        <!-- Name: required, at least 2 characters -->
+                        <input name="name" type="text" placeholder="Enter Your Name*" required minlength="2" />
+
+                        <!-- Phone Number: required, must be 10 digits -->
+                        <input name="number" type="tel" placeholder="Enter Your Number*" pattern="[0-9]{10}"
+                            title="Enter a valid 10-digit number" required />
                     </div>
-                    <input name="email" type="email" placeholder="Enter Your Email" />
+
+                    <!-- Email: required, must be valid email -->
+                    <input name="email" type="email" placeholder="Enter Your Email*" required />
+
+                    <!-- Service: required -->
                     <select name="service">
-                        <option>Services</option>
-                        <option>Tax Consultation</option>
-                        <option>Audit Services</option>
-                        <option>Investment Advice</option>
+                        <option value="">Select a Service</option>
+                        <option value="tax">Tax Consultation</option>
+                        <option value="audit">Audit Services</option>
+                        <option value="investment">Investment Advice</option>
                     </select>
-                    <textarea name="message" placeholder="Enter Your Message"></textarea>
+
+                    <!-- Message: required, at least 10 characters -->
+                    <!-- Message: required, between 10 and 300 characters -->
+                    <textarea name="message" id="message" placeholder="Enter Your Message" minlength="10"
+                        maxlength="300"></textarea>
+                    <p id="charCount" style="display: inline-block;text-align: right;">0 / 300 characters</p>
+
                     <button type="submit">Send Message</button>
                 </form>
+
             </div>
         </section>
         <!-- footer part -->
@@ -171,6 +186,14 @@
     </div>
 
     <script src="assets/email.js"></script>
+    <script>
+        const message = document.getElementById("message");
+        const charCount = document.getElementById("charCount");
+
+        message.addEventListener("input", () => {
+            charCount.textContent = `${message.value.length} / 300 characters`;
+        });
+    </script>
 </body>
 
 </html>

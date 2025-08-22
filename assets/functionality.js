@@ -43,8 +43,8 @@ window.addEventListener('load', () => {
     tl.from(".left-section", {
         clipPath: "inset(0% 100% 0% 0%)", // reveals from left to right
         opacity: 0,
-        duration: 2.5,                    // ⏳ slower duration
-        ease: "slow(0.7, 0.7, false)"     // 🧈 ultra-smooth easing
+        duration: 2.5,                    //  slower duration
+        ease: "slow(0.7, 0.7, false)"     //  ultra-smooth easing
     })
         .from(".middle-section", {
             opacity: 0,
@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
     // .from(".stats-section", {
     //     y: 80,
     //     opacity: 0,
-    //     scale: 0.85,   // ✅ Add scale-up effect
+    //     scale: 0.85,   //  Add scale-up effect
     //     duration: 1.5
     // }, "-=1")
     // .from(".stat-item", {
@@ -104,7 +104,7 @@ function startStatsAnimation() {
     statItems.forEach((item) => {
         const rawText = item.textContent.replace('+', '');
         const target = parseInt(rawText);
-        animateCountUp(item, target, 4000); // ✅ slowed to 4 seconds
+        animateCountUp(item, target, 4000); //  slowed to 4 seconds
     });
 }
 
@@ -275,21 +275,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ]
         },
-        {
-            containerId: "flipbook3",
-            pages: [
-                {
-                    title: "Good and Services Tax",
-                    image: "./assets/images/management.svg",
-                    items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
-                },
-                {
-                    title: "Accounting Services",
-                    image: "./assets/images/management.svg",
-                    items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
-                }
-            ]
-        },
+        // {
+        //     containerId: "flipbook3",
+        //     pages: [
+        //         {
+        //             title: "Good and Services Tax",
+        //             image: "./assets/images/management.svg",
+        //             items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
+        //         },
+        //         {
+        //             title: "Accounting Services",
+        //             image: "./assets/images/management.svg",
+        //             items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
+        //         }
+        //     ]
+        // },
         {
             containerId: "flipbook4",
             pages: [
@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pageFlip.loadFromHTML(container.querySelectorAll(".page"));
         pageFlips.push(pageFlip);
 
-        // 🔥 Open page with an angled look on initial load
+        //  Open page with an angled look on initial load
         setTimeout(() => {
             pageFlip.flip(4);
         }, 500);

@@ -1769,6 +1769,7 @@ only screen and (min-width: 1600px) and (max-width: 2880px) and (-webkit-min-dev
     color: #0055A5;
     border-radius: 25px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {

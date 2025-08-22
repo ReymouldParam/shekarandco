@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Redirect based on result
     if ($emailSent) {
-        header("Location: index.html?emailSuccess=true");
+        header("Location: contact.html?emailSuccess=true");
     } else {
         header("Location: contact.html?emailSuccess=false");
     }
