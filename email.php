@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['email'];
 
 
-    $to = "naresh.narnapati@reymould.com";
+    $to = "contact@shekarandco.com";
     $subject = "Email enquiry from Hygenixseeds.com website";
     $body = "Email: $email";
 
