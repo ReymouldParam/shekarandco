@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Recipient email
     $to = "contact@shekarandco.com, shekar.sanda@shekarandco.com";
     // Email subject and body
-    $subject = "Email Enquiry from shekarandco.com website";
+    $subject = "Email Enquiry from shekar and co website";
     $body = "Name: $name\n"
         . "Email: $email\n"
         . "Phone: $number\n"
