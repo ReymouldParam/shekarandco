@@ -11,11 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
         popupPara.innerHTML = "Thank you for your interest. We will get back to you shortly.";
         popupMessage.style.display = "block";
 
+        // Scroll smoothly to the popup
+        setTimeout(() => {
+            popupMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 200);
+
 
     } else if (flagValue === 'false') {
         popupHeading.innerHTML = "EMAIL NOT SENT";
         popupPara.innerHTML = "There was an error sending your message. Please try again later.";
         popupMessage.style.display = "block";
+
+        // Scroll smoothly to the popup
+        setTimeout(() => {
+            popupMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 200)
 
     }
 
@@ -25,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Get the current URL without the query parameters
+    // Remove query params from URL
     const baseUrl = window.location.href.split('?')[0];
-
-    // Replace the current state with a new state without the query parameters
     history.replaceState(null, null, baseUrl);
 });
