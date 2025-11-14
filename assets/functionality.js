@@ -30,56 +30,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // SECTION1
 // GSAP Animation
-window.addEventListener('load', () => {
-    console.log("Running GSAP...");
+document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener('load', () => {
+        console.log("Running GSAP...");
 
-    const tl = gsap.timeline({
-        defaults: {
-            ease: "slow(0.7, 0.7, false)", // ultra smooth ease
-            duration: 1.5                  // baseline slower animation
-        }
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "slow(0.7, 0.7, false)", // ultra smooth ease
+                duration: 1.5                  // baseline slower animation
+            }
+        });
+
+        tl.from(".left-section", {
+            clipPath: "inset(0% 100% 0% 0%)", // reveals from left to right
+            opacity: 0,
+            duration: 2.5,                    //  slower duration
+            ease: "slow(0.7, 0.7, false)"     //  ultra-smooth easing
+        })
+            .from(".middle-section", {
+                opacity: 0,
+                scale: 0.85,
+                duration: 1.8
+            }, "-=1")
+            .from(".right-section .business-card", {
+                y: 80,
+                opacity: 0,
+                scale: 0.92,
+                duration: 1.6
+            }, "-=1")
+            .from(".download-btn", {
+                y: 60,
+                opacity: 0,
+                scale: 0.9,
+                duration: 1.5
+            }, "-=1")
     });
-
-    tl.from(".left-section", {
-        clipPath: "inset(0% 100% 0% 0%)", // reveals from left to right
-        opacity: 0,
-        duration: 2.5,                    //  slower duration
-        ease: "slow(0.7, 0.7, false)"     //  ultra-smooth easing
-    })
-        .from(".middle-section", {
-            opacity: 0,
-            scale: 0.85,
-            duration: 1.8
-        }, "-=1")
-        .from(".right-section .business-card", {
-            y: 80,
-            opacity: 0,
-            scale: 0.92,
-            duration: 1.6
-        }, "-=1")
-        .from(".download-btn", {
-            y: 60,
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.5
-        }, "-=1")
-    // .from(".stats-section", {
-    //     y: 80,
-    //     opacity: 0,
-    //     scale: 0.85,   //  Add scale-up effect
-    //     duration: 1.5
-    // }, "-=1")
-    // .from(".stat-item", {
-    //     y: 50,
-    //     opacity: 0,
-    //     scale: 0.90,
-    //     stagger: {
-    //         each: 0.9,
-    //         from: "center"
-    //     },
-    //     duration: 2
-    // }, "-=1.2");
 });
+
 // === Numbers count-up ===
 function animateCountUp(element, target, duration = 4000) { // ⏳ slower animation
     let start = 0;
@@ -255,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "Income Tax",
                     image: "./assets/images/management.svg",
-                    items: ["Income Tax Returns of Individuals, Partnership Firm, Company etc., Income tax Notices and Appeals representation/Handing Litigation and Appeals, Company etc.","Tax Planning and Advisory","International Taxation and Transfer Pricing"]
+                    items: ["Income Tax Returns of Individuals, Partnership Firm, Company etc., Income tax Notices and Appeals representation/Handing Litigation and Appeals, Company etc.", "Tax Planning and Advisory", "International Taxation and Transfer Pricing"]
                 },
 
             ]
@@ -266,30 +253,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "Goods and Services Tax ",
                     image: "./assets/images/management.svg",
-                    items: ["GST Registration Services", "GST Return Filling and Compliance", "Representation and Litigation Support", "GST Refund Assistance","Input Tax Credit Management"]
+                    items: ["GST Registration Services", "GST Return Filling and Compliance", "Representation and Litigation Support", "GST Refund Assistance", "Input Tax Credit Management"]
                 },
                 {
                     title: "Accounting",
                     image: "./assets/images/management.svg",
-                    items: ["Book Keeping and Financial Accounting", "Finalization of Accounts", "Preparation of Financial Statements", "Payroll Accounting and Compliance","Accounts Receivable and Payable Management"]
+                    items: ["Book Keeping and Financial Accounting", "Finalization of Accounts", "Preparation of Financial Statements", "Payroll Accounting and Compliance", "Accounts Receivable and Payable Management"]
                 }
             ]
         },
-        // {
-        //     containerId: "flipbook3",
-        //     pages: [
-        //         {
-        //             title: "Good and Services Tax",
-        //             image: "./assets/images/management.svg",
-        //             items: ["GST Registration", "Monthly Filing", "GST Audit", "Compliance Review"]
-        //         },
-        //         {
-        //             title: "Accounting Services",
-        //             image: "./assets/images/management.svg",
-        //             items: ["Company Formation", "ROC Filings", "Annual Compliance", "Secretarial Services"]
-        //         }
-        //     ]
-        // },
         {
             containerId: "flipbook4",
             pages: [
@@ -301,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "Due Diligence and Valuation",
                     image: "./assets/images/management.svg",
-                    items: ["Financial Due Diligence", "Financial Due Diligence", "Legal and Secretarial Due Diligence", "Valuation of Business/ Shares","Valuation of Merger and Demerger"]
+                    items: ["Financial Due Diligence", "Financial Due Diligence", "Legal and Secretarial Due Diligence", "Valuation of Business/ Shares", "Valuation of Merger and Demerger"]
                 }
             ]
         }
