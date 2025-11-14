@@ -1,0 +1,70 @@
+/* Google font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fb;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #0c5d9d;
+    /* Updated color */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #0c5d9d;
+    /* Updated color */
+}
+
+
+/* Body text */
+p,
+li {
+    font-size: 16px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
